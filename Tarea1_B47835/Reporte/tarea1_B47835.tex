@@ -1,0 +1,621 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper, margin=1in]{geometry}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{longtable}
+
+
+
+%Figuras
+\usepackage{graphicx, subfigure}
+\usepackage[]{tikz}
+\usepackage{pbox}
+
+%Matemática
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%Símbolos mate extra (alfabetos, etc.)
+\usepackage{mathrsfs}
+
+
+%Algoritmos
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{language=C++,
+basicstyle=\footnotesize,
+                keywordstyle=\color{blue}\ttfamily,
+                stringstyle=\color{red}\ttfamily,
+                commentstyle=\color{green}\ttfamily,
+                morecomment=[l][\color{magenta}]{\#}
+}
+
+
+\usepackage{color}
+\usepackage{hyperref}
+
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{tabulary}
+\definecolor{darkblue}{rgb}{0 , 0.054 , 0.196}
+
+
+
+\title{Reporte Tarea 1}
+\author{Ericka Z\'u\~niga Calvo - B47835}
+\date{20 de enero de 2017}
+
+\begin{document}
+
+\maketitle
+\hrule
+\hrule
+\tableofcontents
+\hspace{5mm}
+\hrule
+\hrule
+
+
+\section{Enunciados}
+Implemente un programa en C++ utilizando herencia, que modele las tres aves legendarias de Pok\'emon: Articuno, Moltres, Zapdos.
+
+\begin{enumerate}
+\item Implemente una clase abstracta Pokemon que contenga:
+\begin{itemize}
+\item Atributos: name, species,HP,ATK,DEF,sATK,sDEF,SPD,EXP,call.
+\item M\'etodos:
+\begin{itemize}
+\item virtual void atk1(Pokemon \&other)=0
+\item virtual void atk2(Pokemon \&other)=0
+\item virtual void atk3(Pokemon \&other)=0
+\item virtual void atk4(Pokemon \&other)=0
+\item string call
+\item void Info()
+\end{itemize}
+\end{itemize}
+\item Implemente cuatro clases, llamadas: Electric, Flying, Fire, Water que modelen los tipos de las aves m\'iticas. Estas clases herendan de la clase Pokemon.
+\begin{itemize}
+\item M\'etodos:
+\begin{itemize}
+\item static string getType()
+\item static string getStrongVs()
+\item static string getWeakVs()
+\end{itemize}
+\end{itemize}
+\item Implemente tres clases concretas llamadas: Zapdos, Moltres, Articuno.
+\begin{itemize}
+\item Atributos: Type, strongVs,weakVs.
+\item M\'etodos:
+\begin{itemize}
+\item void print
+\item void atk1(Pokemon \&other);
+\item void atk2(Pokemon \&other);
+\item void atk3(Pokemon \&other);
+\item void atk4(Pokemon \&other);
+
+\end{itemize}
+\end{itemize}
+\item Haga un programa de prueba en donde se creen dos objetos e interactuen entre ellos.
+\item Escriba tambi\'en un Makefile con al menos tres reglas:
+\begin{itemize}
+\item build: para compilar el programa.
+\item run: para ejecutar el programa.
+\item clean: para eliminar ejecutables y archivos intermedios.
+\end{itemize}
+\end{enumerate}
+
+\section{C\'odigo}
+
+A continuaci\'on se explicar\'an las clases Pokemon, Electric y Zapdos, junto con sus correspondientes definiciones, m\'etodos y atributos. Se explican \'unicamente estas, ya que son representativas de las dem\'as clases correspondientes.
+
+\subsection{ Clase Pokemon:}
+\begin{itemize}
+\item Pokemon.h:
+\begin{lstlisting}
+#ifndef POKEMON_H
+#define POKEMON_H
+#include<iostream>
+#include <vector>
+
+class Pokemon {
+public:
+    Pokemon();
+    virtual ~Pokemon();
+    std::string name;
+    std::string species;
+    int HP;
+    int ATK;
+    int DEF;
+    int sATK;
+    int sDEF;
+    int SPD;
+    int EXP;
+    std::string cry;
+
+    void inf();
+    std::string doCry();
+    virtual void atk1(Pokemon &other)=0;
+    virtual void atk2(Pokemon &other)=0;
+    virtual void atk3(Pokemon &other)=0;
+    virtual void atk4(Pokemon &other)=0;
+    virtual std::vector<std::string> getTypes()=0;
+
+    double getModifier(double stab, double type);
+    int getDamage(int pwr,int atk, int def,double stab, double type);
+    static double fRand(double fMin, double fMax);
+    bool isCritHit(int speed);
+    bool hasMissed(int accuracy);
+
+};
+
+#endif /* POKEMON_H */
+
+\end{lstlisting}
+\item Pokemon.cpp
+\begin{lstlisting}
+#include "Pokemon.h"
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+Pokemon::Pokemon() {
+    // std::cout << "Este es el constructor de mi Pokemon" << std::endl;
+}
+
+Pokemon::~Pokemon() {
+    // std::cout << "Este es el destructor de mi Pokemon" << std::endl;
+}
+
+void Pokemon::inf() {
+    std::cout << "Name:  " << name << std::endl;
+    std::cout << "Species: " << species << std::endl;
+    std::cout << "HP:  " << HP << std::endl;
+    std::cout << "ATK:  " << ATK << std::endl;
+    std::cout << "DEF: " << DEF << std::endl;
+    std::cout << "sATK: " << sATK << std::endl;
+    std::cout << "sDEF: " << sDEF << std::endl;
+    std::cout << "SPD: " << SPD << std::endl;
+    std::cout << "EXP: " << EXP << std::endl;
+    std::cout << "cry" << cry << std::endl;
+};
+
+double Pokemon::getModifier(double stab, double type) {
+    srand(time(NULL));
+    int critMult = 1;
+    if (isCritHit(SPD)) {
+        critMult = 2;
+    }
+    return stab * type * critMult * fRand(0.85, 1.0);
+}
+
+int Pokemon::getDamage(int pwr, int atk, int def, double stab, double type) {
+    double modifier = getModifier(stab, type);
+    double damage = ((12 / 250)*(atk / def) * pwr + 2) * modifier * 5;
+    return (int) damage;
+
+}
+
+double Pokemon::fRand(double fMin, double fMax) {
+    double f = (double) rand() / (double) (RAND_MAX);
+    return fMin + f * (fMax - fMin);
+}
+
+bool Pokemon::isCritHit(int speed) {
+    double treshold = speed / 2;
+    srand(time(NULL));
+    double x = fRand(0.0, 255.0);
+    if (x <= treshold) {
+        return true;
+        std::cout << "A critical hit!" << std::endl;
+    } else {
+        return false;
+    }
+}
+
+bool Pokemon::hasMissed(int accuracy) {
+    srand(time(NULL));
+    double x = fRand(0.0, 1.0);
+    std::cout << "El valor de x es" << x << std::endl;
+    if (x > accuracy / 100) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+std::string Pokemon::doCry() {
+    return cry;
+}
+\end{lstlisting}
+
+\begin{itemize}
+\item Bibliotecas utilizadas:
+\begin{itemize}
+\item iostream: Se encarga del flujo de entrada y salida de datos.
+\item vector: Se utiliza para operar con arreglos unidimensionales de datos.
+\item stdlib.h: En este caso se utiliza para utilizar la funci\'on de C++ rand(), es decir, generar un n\'umero aleatorio.
+\item time.h: Es para plantear la semilla,la cual en este caso es el reloj de la m\'aquina, que origina los n\'umeros pseudoaleatorios. 
+\end{itemize}
+\item M\'etodos:
+\begin{itemize}
+\item Pokemon():
+Constructor de la clase Pokemon.
+\item $\sim$ Pokemon():
+Destructor de la clase Pokemon.
+\item inf():
+Se encarga de imprimir todos los atributos correspondientes a los Objetos de la clase Pokemon.
+\item doCry():
+Retorna como string el canto del objeto pokemon.
+\item virtual atk\#(Pokemon \&other)=0:
+Genera m\'etodos virtuales puros (atk1,atk2,atk3,atk4), los cuales posteriormente ser\'an inicializados en las clases Zapdos, Moltres y Articuno. De manera que cada uno puede definirlo a su conveniencia y recibe como par\'ametro un objeto de tipo Pokemon.
+\item virtual vector string getTypes()=0:
+Al igual que el m\'etodo anterior, es virtual puro. Y se creo para que retorne un vector de tipo string que contiene los tipos de las especies(Zapdos,Moltres,...).
+\item getModifier, getDamage:
+Son m\'etodos que retornan el resultado de una funci\'on matem\'atica, de manera que se obtiene el da\~no que hace un ataque al Pokemon oponente. 
+\item fRand: 
+Genera un n\'umero aleatorio entre fMin y fMax.
+\item isCritHit:
+En base a la generaci\'on de un n\'umero aleatorio y su comparaci\'on con un n\'umero fijo (treshold) dice si el golpe es cr\'itico o no.
+\item hasMissed:
+Toma como par\'amentro la precisi\'on del golpe, y en base a la generaci\'on de un n\'umero aleatorio, retorna si el ataque fue exitoso o no.
+\item cry
+Retorna una string que contiene el canto del Pokemon.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\subsection{Clase Electric:} 
+Esta clase hereda de la clase Pokemon.
+\begin{itemize}
+\item Electric.h
+\begin{lstlisting}
+
+#ifndef ELECTRIC_H
+#define ELECTRIC_H
+#include <iostream>
+#include "Pokemon.h"
+
+class Electric : virtual public Pokemon{
+public:
+  Electric();
+  virtual ~Electric();
+  static std::string getType();
+  static std::string getStrongVs();
+  static std::string getWeakVs();
+} ;
+
+#endif /* ELECTRIC_H */
+\end{lstlisting}
+
+\item Electric.cpp
+\begin{lstlisting}
+#include "Electric.h"
+
+Electric::Electric() {
+    // std::cout<<"Constructor de pokemon tipo electrico"<<std::endl;
+}
+
+Electric::~Electric() {
+    // std::cout<<"Destructor de pokemon tipo electrico"<<std::endl;
+}
+
+std::string Electric::getType() {
+    return "Electric";
+}
+
+std::string Electric::getStrongVs() {
+    return "Water and Flying";
+}
+
+std::string Electric::getWeakVs() {
+    return " ";
+}
+
+\end{lstlisting}
+\item Bibliotecas utilizadas:
+\begin{itemize}
+\item iostream.
+\item Pokemon.h: Este header es necesario, para hacer que la clase Electric herede de Pokemon.
+\end{itemize}
+\item M\'etodos:
+\begin{itemize}
+\item Electric(): 
+Constructor.
+\item $\sim$Electric():
+Destructor.
+\item getType():
+Retorna una string que contiene el tipo de Pokemon.
+
+\item getStrongVs():
+Retorna una string que contiene los tipos de Pokemon a los que es fuerte al enfrentarse dicho tipo, en este caso Electric.
+
+\item getWeakVs():
+Retorna una string que contiene los tipos de Pokemon a los que es debil al enfrentarse dicho tipo, en este caso Electric.
+
+
+\end{itemize}
+\end{itemize}
+\subsection{ Clase Zapdos.}
+Esta clase hereda tanto de la clase Electric, como de la clase Flying.
+\begin{itemize}
+\item Zapdos.h
+\begin{lstlisting}
+#ifndef ZAPDOS_H
+#define ZAPDOS_H
+
+#include <iostream>
+#include <vector>
+#include "Pokemon.h"
+#include "Electric.h"
+#include "Flying.h"
+
+class Zapdos : public Electric, public Flying{
+public:
+  Zapdos();
+  virtual ~Zapdos();
+  std::string type;
+  std::string strongVs;
+  std::string weakVs;
+  void atk1(Pokemon &other);
+  void atk2(Pokemon &other);
+  void atk3(Pokemon &other);
+  void atk4(Pokemon &other);
+  std::vector<std::string> getTypes();
+  void printInf();
+  static void gen_random(char *s, const int len);
+};
+
+#endif /* ZAPDOS_H */
+\end{lstlisting}
+\item Zapdos.cpp
+\begin{lstlisting}
+#include "Zapdos.h"
+
+static const char alphanum[] =
+        "0123456789"
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+int stringLength = sizeof (alphanum) - 1;
+
+Zapdos::Zapdos() {
+    //std::cout<<"Constructor Zapdos"<<std::endl;
+    type = Electric::getType() + "/" + Flying::getType();
+    strongVs = Electric::getStrongVs() + Flying::getStrongVs();
+    weakVs = Electric::getWeakVs() + Flying::getWeakVs();
+    char* tempName = new char;
+    gen_random(tempName, 4);
+    name = tempName;
+    delete tempName;
+    species = "Zapdos";
+    cry = "TUNUNUNUN";
+    HP = 90;
+    ATK = 90;
+    DEF = 85;
+    sATK = 125;
+    sDEF = 90;
+    SPD = 100;
+    EXP = 10;
+}
+
+Zapdos::~Zapdos() {
+    // std::cout<<"Destructor Zapdos"<<std::endl;
+}
+
+void Zapdos::gen_random(char *s, const int len) {
+    static const char alphanum[] =
+            "0123456789"
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    for (int i = 0; i < len; ++i) {
+        s[i] = alphanum[rand() % (sizeof (alphanum) - 1)];
+    }
+
+    s[len] = 0;
+}
+
+std::vector<std::string> Zapdos::getTypes() {
+    std::vector<std::string> types;
+    types.push_back(Electric::getType());
+    types.push_back(Flying::getType());
+    return types;
+}
+
+void Zapdos::atk1(Pokemon &other) {
+    std::cout << name << ":" << species << " attack " << other.name 
+    << ":" << other.species << std::endl;
+    
+    std::cout << name << ":" << species << " used DRILL PECK!" << std::endl;
+    int pwr = 80;
+    int acc = 100;
+    std::vector<std::string> oType = other.getTypes();
+    double mult = 1;
+    bool isElectric = false;
+    int i = 0;
+    while (!isElectric && i < 2) {
+        if (oType[i].compare("Electric") == 0) {
+            std::cout << "It's not very effective..." << std::endl;
+            mult = 0.5;
+            isElectric = true;
+        }
+        i++;
+    }
+    int damage = getDamage(pwr, ATK, DEF, 1.5, mult);
+
+    other.HP = other.HP - damage;
+    
+    std::cout << "The damage caused by " << name << ":" << species << " to" 
+    << other.name << ":" << other.species << " is: " << damage << std::endl;
+    
+    std::cout << "------------------------------------------" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << "" << std::endl;
+}
+
+void Zapdos::atk2(Pokemon &other) {
+    std::cout << name << ":" << species << " attack " << other.name 
+    << ":" << other.species << std::endl;
+    
+    std::cout << name << ":" << species << " used THUNDER SHOCK!" << std::endl;
+    int pwr = 40;
+    int acc = 100;
+    std::vector<std::string> oType = other.getTypes();
+    double mult = 2;
+    bool isWater = false;
+    int i = 0;
+    while (!isWater && i < 2) {
+        if (oType[i].compare("Water") == 0) {
+            mult = 4;
+            isWater = true;
+        }
+        i++;
+    }
+    std::cout << "It's super effective!" << std::endl;
+
+    int damage = getDamage(pwr, sATK, sDEF, 1.5, mult);
+    other.HP = other.HP - damage;
+    std::cout << "The damage caused by " << name << ":" << species << " to" 
+    << other.name << ":" << other.species << " is: " << damage << std::endl;
+    
+    std::cout << "------------------------------------------" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << "" << std::endl;
+}
+
+void Zapdos::atk3(Pokemon &other) {
+    std::cout << name << ":" << species << " attack " << other.name <<
+    ":" << other.species << std::endl;
+    
+    std::cout << name << ":" << species << " used ZAP CANNON!" << std::endl;
+    int pwr = 120;
+    int acc = 50;
+    if (hasMissed(acc)) {
+        std::cout << name << ":" << species << "'s attack missed!" << std::endl;
+        std::cout << "------------------------------------------" << std::endl;
+        std::cout << "" << std::endl;
+        std::cout << "" << std::endl;
+    } else {
+        std::vector<std::string> oType = other.getTypes();
+        double mult = 2;
+        bool isWater = false;
+        int i = 0;
+        while (!isWater && i < 2) {
+            if (oType[i].compare("Water") == 0) {
+                mult = 4;
+                isWater = true;
+            }
+            i++;
+        }
+        std::cout << "It's super effective!" << std::endl;
+        int damage = getDamage(pwr, sATK, sDEF, 1.5, mult);
+        other.HP -= damage;
+        std::cout << "The damage caused by " << name << ":" << species << " to" <<
+        other.name << ":" << other.species << " is: " << damage << std::endl;
+        
+        std::cout << "------------------------------------------" << std::endl;
+        std::cout << "" << std::endl;
+        std::cout << "" << std::endl;
+    }
+
+}
+
+void Zapdos::atk4(Pokemon &other) {
+    std::cout << name << ":" << species << " attack " << other.name <<
+    ":" << other.species << std::endl;
+    
+    std::cout << name << ":" << species << " used THUNDER!" << std::endl;
+    int pwr = 110;
+    int acc = 70;
+    if (hasMissed(acc)) {
+        std::cout << name << ":" << species << "'s attack missed!" << std::endl;
+        std::cout << "------------------------------------------" << std::endl;
+        std::cout << "" << std::endl;
+        std::cout << "" << std::endl;
+    } else {
+        std::vector<std::string> oType = other.getTypes();
+        double mult = 2;
+        bool isWater = false;
+        int i = 0;
+        while (!isWater && i < 2) {
+            if (oType[i].compare("Water") == 0) {
+                mult = 4;
+                isWater = true;
+            }
+            i++;
+        }
+        std::cout << "It's super effective!" << std::endl;
+        int damage = getDamage(pwr, sATK, sDEF, 1.5, mult);
+        other.HP -= damage;
+        std::cout << "The damage caused by " << name << ":" << species << " to" <<
+        other.name << ":" << other.species << " is: " << damage << std::endl;
+        
+        std::cout << "------------------------------------------" << std::endl;
+        std::cout << "" << std::endl;
+        std::cout << "" << std::endl;
+    }
+}
+
+void Zapdos::printInf() {
+    std::cout << "Name:  " << name << std::endl;
+    std::cout << "Species: " << species << std::endl;
+    std::cout << "HP:  " << HP << std::endl;
+    std::cout << "ATK:  " << ATK << std::endl;
+    std::cout << "DEF: " << DEF << std::endl;
+    std::cout << "sATK: " << sATK << std::endl;
+    std::cout << "sDEF: " << sDEF << std::endl;
+    std::cout << "SPD: " << SPD << std::endl;
+    std::cout << "EXP: " << EXP << std::endl;
+    std::cout << "cry: " << cry << std::endl;
+    std::cout << "------------------------------------------" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << "" << std::endl;
+}
+\end{lstlisting}
+\item Bibliotecas utilizadas:
+\begin{itemize}
+\item iostream
+\item vector
+\item Pokemon.h
+\item Electric.h
+\item Flying.h
+
+\end{itemize}
+\item M\'etodos:
+\begin{itemize}
+\item Zapdos()
+\item $\sim$Zapdos()
+\item atk1 : 
+Se inicializa el m\'etodo atk1, el cual recibe como parametro un objeto de la clase Pokemon.
+\item getTypes(): Se crea un vector que contiene los tipos de Pokemon de Zapdos.
+\item gen\_random: Genera un string de tama\~no len, la cual contiene caracteres de tipo num\'ericos o alfabeticos.
+\item printInf(): Imprime la informaci\'on relevante del Pokemon.
+\end{itemize}
+\end{itemize}
+
+\section{Conclusiones}
+\begin{itemize}
+\item Se logr\'o utilizar herencia para crear distintas clases que utilicen los m\'etodos y atributos de sus clases padres.
+\item Se implementaron distintas clases con herencia m\'ultiple.
+\item Se utilizaron m\'etodos virtuales, declarados como virtuales puros en la clase padre, para ser utilizados por cada uno de sus clases hijos.
+\end{itemize}
+
+
+
+
+
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+
+
+\end{document}
