@@ -1,0 +1,9 @@
+<map id="Animal::buscar" name="Animal::buscar">
+<area shape="rect" id="node2" href="$class_lobo.html#a49fcb341d6af488987d7c8a10ad45b38" title="Lobo::operator++" alt="" coords="163,5,285,32"/>
+<area shape="rect" id="node3" href="$class_lobo.html#a2b4bba4b6d6efa24af4d8e3b986dc7f2" title="Lobo::operator~" alt="" coords="167,56,281,83"/>
+<area shape="rect" id="node4" href="$class_lobo.html#a50dac66859d049bc94d0d741297bae3c" title="Lobo::machoAlfa" alt="" coords="164,107,284,133"/>
+<area shape="rect" id="node5" href="$class_oveja.html#a0ff5ac43f8a666b3b130de88da605fe2" title="Oveja::operator~" alt="" coords="165,157,283,184"/>
+<area shape="rect" id="node6" href="$class_raton.html#a7ec71ea95a98d13bf2cccf108b3c76d6" title="Raton::operator~" alt="" coords="164,208,284,235"/>
+<area shape="rect" id="node7" href="$class_zorro.html#a747bf931fd26445891eb3af3785a0356" title="Zorro::operator++" alt="" coords="163,259,285,285"/>
+<area shape="rect" id="node8" href="$class_zorro.html#a9fdef26a109d506ac85b739c9920cc85" title="Zorro::operator~" alt="" coords="167,309,281,336"/>
+</map>

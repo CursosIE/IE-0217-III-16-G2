@@ -1,0 +1,6 @@
+<map id="Animal::getSex" name="Animal::getSex">
+<area shape="rect" id="node2" href="$class_lobo.html#a2b4bba4b6d6efa24af4d8e3b986dc7f2" title="Lobo::operator~" alt="" coords="169,5,282,32"/>
+<area shape="rect" id="node3" href="$class_oveja.html#a0ff5ac43f8a666b3b130de88da605fe2" title="Oveja::operator~" alt="" coords="166,56,285,83"/>
+<area shape="rect" id="node4" href="$class_raton.html#a7ec71ea95a98d13bf2cccf108b3c76d6" title="Raton::operator~" alt="" coords="165,107,285,133"/>
+<area shape="rect" id="node5" href="$class_zorro.html#a9fdef26a109d506ac85b739c9920cc85" title="Zorro::operator~" alt="" coords="168,157,283,184"/>
+</map>

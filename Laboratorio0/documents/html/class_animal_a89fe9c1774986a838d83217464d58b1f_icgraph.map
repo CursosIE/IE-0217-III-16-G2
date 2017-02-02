@@ -1,0 +1,6 @@
+<map id="Animal::getEspacio" name="Animal::getEspacio">
+<area shape="rect" id="node2" href="$class_lobo.html#a3d93cb16a5a0f1e93e0321116227ac14" title="Lobo::operator!" alt="" coords="193,5,303,32"/>
+<area shape="rect" id="node3" href="$class_oveja.html#ae63ca7bb074bf36591e3f12f2c7a9037" title="Oveja::operator!" alt="" coords="191,56,305,83"/>
+<area shape="rect" id="node4" href="$class_raton.html#a7d07f8b6493b3ee9130ba0143acd755f" title="Raton::operator!" alt="" coords="190,107,306,133"/>
+<area shape="rect" id="node5" href="$class_zorro.html#ab9ddecca664da566680332b0aa0ba225" title="Zorro::operator!" alt="" coords="193,157,303,184"/>
+</map>

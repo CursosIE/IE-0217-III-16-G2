@@ -1,0 +1,227 @@
+\section{Animal Class Reference}
+\label{class_animal}\index{Animal@{Animal}}
+
+
+{\ttfamily \#include $<$Animal.\-h$>$}
+
+
+
+Inheritance diagram for Animal\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_animal__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Animal} ()
+\item 
+{\bf Animal} (const {\bf Animal} \&orig)
+\item 
+virtual {\bf $\sim$\-Animal} ()
+\item 
+string {\bf get\-Sex} ()
+\item 
+virtual void {\bf operator!} ()=0
+\item 
+virtual void {\bf operator++} (int)=0
+\item 
+virtual void {\bf operator$\sim$} ()=0
+\item 
+virtual void {\bf operator-\/-\/} (int)=0
+\item 
+virtual void {\bf macho\-Alfa} ()=0
+\item 
+int $\ast$ {\bf buscar} (string busq)
+\item 
+int $\ast$ {\bf get\-Espacio} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf energia}
+\item 
+string {\bf identificador}
+\item 
+string {\bf sexo}
+\item 
+string {\bf especie}
+\item 
+int {\bf ubicacion} [2]
+\item 
+bool {\bf se\-Reprodujo}
+\item 
+bool {\bf se\-Movio}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Animal@{Animal}!Animal@{Animal}}
+\index{Animal@{Animal}!Animal@{Animal}}
+\subsubsection[{Animal}]{\setlength{\rightskip}{0pt plus 5cm}Animal\-::\-Animal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_animal_a1e726a49ec952443190ac62dad22353c}
+\index{Animal@{Animal}!Animal@{Animal}}
+\index{Animal@{Animal}!Animal@{Animal}}
+\subsubsection[{Animal}]{\setlength{\rightskip}{0pt plus 5cm}Animal\-::\-Animal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Animal} \&}]{orig}
+\end{DoxyParamCaption}
+)}\label{class_animal_ab26f5f62b5194201e0b07729bde2f5dc}
+\index{Animal@{Animal}!$\sim$\-Animal@{$\sim$\-Animal}}
+\index{$\sim$\-Animal@{$\sim$\-Animal}!Animal@{Animal}}
+\subsubsection[{$\sim$\-Animal}]{\setlength{\rightskip}{0pt plus 5cm}Animal\-::$\sim$\-Animal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_animal_a476af25adde5f0dfa688129c8f86fa5c}
+
+
+\subsection{Member Function Documentation}
+\index{Animal@{Animal}!buscar@{buscar}}
+\index{buscar@{buscar}!Animal@{Animal}}
+\subsubsection[{buscar}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ Animal\-::buscar (
+\begin{DoxyParamCaption}
+\item[{string}]{busq}
+\end{DoxyParamCaption}
+)}\label{class_animal_a8676b59bee05f46ad2a57c372933359c}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{class_animal_a8676b59bee05f46ad2a57c372933359c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Animal@{Animal}!get\-Espacio@{get\-Espacio}}
+\index{get\-Espacio@{get\-Espacio}!Animal@{Animal}}
+\subsubsection[{get\-Espacio}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ Animal\-::get\-Espacio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_animal_a89fe9c1774986a838d83217464d58b1f}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_animal_a89fe9c1774986a838d83217464d58b1f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Animal@{Animal}!get\-Sex@{get\-Sex}}
+\index{get\-Sex@{get\-Sex}!Animal@{Animal}}
+\subsubsection[{get\-Sex}]{\setlength{\rightskip}{0pt plus 5cm}string Animal\-::get\-Sex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_animal_ae1626c6c4eb5585eaf18df9bf9bb0e01}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{class_animal_ae1626c6c4eb5585eaf18df9bf9bb0e01_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Animal@{Animal}!macho\-Alfa@{macho\-Alfa}}
+\index{macho\-Alfa@{macho\-Alfa}!Animal@{Animal}}
+\subsubsection[{macho\-Alfa}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Animal\-::macho\-Alfa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_animal_af0195b0b3cec650e1ece60edd6e031ef}
+
+
+Implemented in {\bf Raton} \doxyref{}{p.}{class_raton_a6b74bd921ef203b600be27e9c28a14c8}, {\bf Zorro} \doxyref{}{p.}{class_zorro_af1ca7e321452975225376d77905b4a5b}, {\bf Oveja} \doxyref{}{p.}{class_oveja_a7821f1605ff38842fac3d79d3ad534c6}, and {\bf Lobo} \doxyref{}{p.}{class_lobo_a50dac66859d049bc94d0d741297bae3c}.
+
+\index{Animal@{Animal}!operator!@{operator!}}
+\index{operator!@{operator!}!Animal@{Animal}}
+\subsubsection[{operator!}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Animal\-::operator! (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_animal_a0def749264daf97160df081b0c028ffe}
+
+
+Implemented in {\bf Raton} \doxyref{}{p.}{class_raton_a7d07f8b6493b3ee9130ba0143acd755f}, {\bf Zorro} \doxyref{}{p.}{class_zorro_ab9ddecca664da566680332b0aa0ba225}, {\bf Oveja} \doxyref{}{p.}{class_oveja_ae63ca7bb074bf36591e3f12f2c7a9037}, and {\bf Lobo} \doxyref{}{p.}{class_lobo_a3d93cb16a5a0f1e93e0321116227ac14}.
+
+\index{Animal@{Animal}!operator++@{operator++}}
+\index{operator++@{operator++}!Animal@{Animal}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Animal\-::operator++ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_animal_a82bc2c40b773a232548f961053f9067d}
+
+
+Implemented in {\bf Raton} \doxyref{}{p.}{class_raton_acd6d6d7e944c9212e368dab9ffb32b72}, {\bf Zorro} \doxyref{}{p.}{class_zorro_a747bf931fd26445891eb3af3785a0356}, {\bf Oveja} \doxyref{}{p.}{class_oveja_a80f81a1a32548bcec1e1b28ea5f9b503}, and {\bf Lobo} \doxyref{}{p.}{class_lobo_a49fcb341d6af488987d7c8a10ad45b38}.
+
+\index{Animal@{Animal}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Animal@{Animal}}
+\subsubsection[{operator-\/-\/}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Animal\-::operator-\/-\/ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_animal_a43d005a7b5dfa9888a9db21e1e864609}
+
+
+Implemented in {\bf Raton} \doxyref{}{p.}{class_raton_ac6c595aae5f66043f2e3cce1dd38e0e0}, {\bf Zorro} \doxyref{}{p.}{class_zorro_ac6abad94a814d37f66f6a7698c75493e}, {\bf Oveja} \doxyref{}{p.}{class_oveja_a3cc9887909aeb093a1133f48d6c13670}, and {\bf Lobo} \doxyref{}{p.}{class_lobo_a880e124e43304deac3aa16188ed7fec6}.
+
+\index{Animal@{Animal}!operator$\sim$@{operator$\sim$}}
+\index{operator$\sim$@{operator$\sim$}!Animal@{Animal}}
+\subsubsection[{operator$\sim$}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Animal\-::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_animal_a6539ec18d8975982b65de76d8e5638f0}
+
+
+Implemented in {\bf Raton} \doxyref{}{p.}{class_raton_a7ec71ea95a98d13bf2cccf108b3c76d6}, {\bf Zorro} \doxyref{}{p.}{class_zorro_a9fdef26a109d506ac85b739c9920cc85}, {\bf Oveja} \doxyref{}{p.}{class_oveja_a0ff5ac43f8a666b3b130de88da605fe2}, and {\bf Lobo} \doxyref{}{p.}{class_lobo_a2b4bba4b6d6efa24af4d8e3b986dc7f2}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Animal@{Animal}!energia@{energia}}
+\index{energia@{energia}!Animal@{Animal}}
+\subsubsection[{energia}]{\setlength{\rightskip}{0pt plus 5cm}int Animal\-::energia}\label{class_animal_a2a0fbd8a45d845982fa527c76e336084}
+\index{Animal@{Animal}!especie@{especie}}
+\index{especie@{especie}!Animal@{Animal}}
+\subsubsection[{especie}]{\setlength{\rightskip}{0pt plus 5cm}string Animal\-::especie}\label{class_animal_a6d08af00ece2985d73126798973f84a8}
+\index{Animal@{Animal}!identificador@{identificador}}
+\index{identificador@{identificador}!Animal@{Animal}}
+\subsubsection[{identificador}]{\setlength{\rightskip}{0pt plus 5cm}string Animal\-::identificador}\label{class_animal_aaf269253690238c56a00910c5c17b983}
+\index{Animal@{Animal}!se\-Movio@{se\-Movio}}
+\index{se\-Movio@{se\-Movio}!Animal@{Animal}}
+\subsubsection[{se\-Movio}]{\setlength{\rightskip}{0pt plus 5cm}bool Animal\-::se\-Movio}\label{class_animal_a967a9d502f1ffa9ccafe86e40e7c1724}
+\index{Animal@{Animal}!se\-Reprodujo@{se\-Reprodujo}}
+\index{se\-Reprodujo@{se\-Reprodujo}!Animal@{Animal}}
+\subsubsection[{se\-Reprodujo}]{\setlength{\rightskip}{0pt plus 5cm}bool Animal\-::se\-Reprodujo}\label{class_animal_a55bb4dd08cd6d97ce7e9267e0ffbe25c}
+\index{Animal@{Animal}!sexo@{sexo}}
+\index{sexo@{sexo}!Animal@{Animal}}
+\subsubsection[{sexo}]{\setlength{\rightskip}{0pt plus 5cm}string Animal\-::sexo}\label{class_animal_ae606d25f0901c7780603b5b15d0dc763}
+\index{Animal@{Animal}!ubicacion@{ubicacion}}
+\index{ubicacion@{ubicacion}!Animal@{Animal}}
+\subsubsection[{ubicacion}]{\setlength{\rightskip}{0pt plus 5cm}int Animal\-::ubicacion[2]}\label{class_animal_a80146ee219b24e20b26d5a9828074710}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Animal.\-h}\item 
+{\bf Animal.\-cpp}\end{DoxyCompactItemize}

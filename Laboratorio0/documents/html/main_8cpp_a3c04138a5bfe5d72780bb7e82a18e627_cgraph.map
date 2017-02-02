@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$class_juego.html#a4a542c33876cbe1a1ea4706197fc6a17" title="Juego::Jugar" alt="" coords="105,31,202,57"/>
+<area shape="rect" id="node3" href="$class_matriz.html#af70054abb48b35fcf67e26ecaea43fde" title="Matriz::imprimir" alt="" coords="251,5,363,32"/>
+<area shape="rect" id="node4" href="$_juego_8cpp.html#aa53a3e66a2fd096a2e10c3094ac41e70" title="ImprimirEstado" alt="" coords="251,56,362,83"/>
+</map>
