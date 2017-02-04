@@ -1,0 +1,16 @@
+Universidad de Costa Rica
+Escuela de Ingeniería Eléctrica
+Estructuras Abstractas de Datos y Algoritmos.
+Prof: Ricardo Román
+Laboratorio 0 : Juego de Ecología en C++.
+Estudiantes:
+  Ericka Zúñiga Calvo - B47835
+  Leonardo Hernández Chacón - B43262
+
+Este archivo contiene la implementación en C++, y en python de los métodos
+Selection Sort y Binary Search, con sus respectivos tiempos de ejecución y
+orden de duración. Ante listas de diferentes tamaños.
+
+Una vez que se hace make y se compila el codigo, se debe correr pasandole
+por medio de atributos el archivo lista.txt.
+Y demás parámetros como se indicó en el laboratorio.
