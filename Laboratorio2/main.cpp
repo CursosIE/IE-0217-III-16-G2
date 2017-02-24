@@ -3,10 +3,35 @@
 #include "ListWithPointer.h"
 #include "Cell.h"
 #include "Queue.h"
+#include "Stack.h"
 using namespace std;
 
 int main(int argc, char** argv) {
+     cout<<"Incia prueba ListWithArray"<<endl;
+     /*Prueba de ListWithArray*/
+     ListWithArray< double , int >* lista = new ListWithArray< double , int >();
+     lista->insert(0.1);
+     lista->insert(0.7);
+     lista->insert(0.4);
+     lista->insert(0.3);
+     lista->insert(0.6);
+     lista->insert(0.2);
+     lista->insert(0.4);
+     lista->insert(0.5);
+     cout << "Imprimiendo Lista Desordenada" << endl;
+     lista->printList();
+     
+     cout << "Imprimiendo Lista Ordenada" << endl;
+     lista->sort();
+     lista->printList();
+     cout << endl;
+     cout << endl;
+
+
+    
+     cout<<"Incia prueba ListWithPointer"<<endl;
     /*Prueba de ListWithPointer*/
+   
     ListWithPointer< int , Cell<int>* >* l2 = new ListWithPointer< int , Cell<int>* >();
     ListWithPointer<int, Cell<int>*>* l3 = new ListWithPointer<int, Cell<int>*>();
     cout<<"Imprimiendo lista l3"<<endl;
@@ -38,7 +63,9 @@ int main(int argc, char** argv) {
     l2->emptyList();
     l2->printList();
     
+    
     /*Prueba de Queue*/
+    
     cout<<" "<<endl;
     cout<<" "<<endl;
     cout<<"Incia prueba Queue"<<endl;
@@ -56,7 +83,24 @@ int main(int argc, char** argv) {
     q1->emptyList();
     q1->printList();
     
+    /*Prueba de Stack*/
+    cout<<" "<<endl;
+    cout<<" "<<endl;
+    cout<<"Incia prueba Stack"<<endl;
+    
+    Stack< int , Cell<int>* >* s1 = new Stack< int , Cell<int>* >();
+    s1->insert(1);
+    s1->insert(10);
+    s1->insert(100);
+    s1->insert(1000);
+    s1->printList();
+    s1->remove(0);
+    s1->printList();
+    s1->remove(0);
+    s1->printList();
+    s1->emptyList();
+    s1->printList();
+ 
     return 0;
 }
-
 
