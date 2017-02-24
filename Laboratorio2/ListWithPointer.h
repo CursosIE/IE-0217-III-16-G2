@@ -158,4 +158,3 @@ class ListWithPointer : public List<D, P> {
             P last; //ultimo
 };
 #endif /* LISTWITHPOINTER_H */
-
