@@ -1,0 +1,242 @@
+\section{Queue$<$ D, P $>$ Class Template Reference}
+\label{class_queue}\index{Queue$<$ D, P $>$@{Queue$<$ D, P $>$}}
+
+
+{\ttfamily \#include $<$Queue.\-h$>$}
+
+
+
+Inheritance diagram for Queue$<$ D, P $>$\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Queue$<$ D, P $>$\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_queue__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Queue} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxyref{Queue}{p.}{class_queue}. \end{DoxyCompactList}\item 
+virtual {\bf $\sim$\-Queue} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \doxyref{Queue}{p.}{class_queue}. \end{DoxyCompactList}\item 
+void {\bf insert} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo de insercion de elementos a la cola. \end{DoxyCompactList}\item 
+void {\bf remove} (D d)
+\item 
+P {\bf find} (D d)
+\item 
+void {\bf assign} (P k, D d)
+\item 
+void {\bf sort} ()
+\item 
+int {\bf get\-Size} ()
+\item 
+void {\bf print\-List} ()
+\item 
+P {\bf next} (P k)
+\item 
+P {\bf prev} (P k)
+\item 
+D {\bf get} (P k)
+\item 
+void {\bf empty\-List} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf n}\label{class_queue_a2b095618e827a9e728cb843bf4c0919e}
+
+\begin{DoxyCompactList}\small\item\em Numero de elementos de la cola. \end{DoxyCompactList}\item 
+P {\bf first}\label{class_queue_a66d3f4dcd98ff256982192ccd4cbe1d4}
+
+\begin{DoxyCompactList}\small\item\em Puntero que apunta al primer elemento de la cola. \end{DoxyCompactList}\item 
+P {\bf last}\label{class_queue_a8fa09b42d16c1fe9dea414b29ab9612f}
+
+\begin{DoxyCompactList}\small\item\em Puntero que apunta al último elemento de la cola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename D, typename P$>$class Queue$<$ D, P $>$}
+
+Plantilla de la clase Cola, que hereda de la clase Lista. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\subsubsection[{Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ {\bf Queue}$<$ D, P $>$\-::{\bf Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_queue_aaecc8eba91905e5bda9752e0f85a150e}
+
+
+Constructor de la clase \doxyref{Queue}{p.}{class_queue}. 
+
+Constructor de una cola vacia \index{Queue@{Queue}!$\sim$\-Queue@{$\sim$\-Queue}}
+\index{$\sim$\-Queue@{$\sim$\-Queue}!Queue@{Queue}}
+\subsubsection[{$\sim$\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ virtual {\bf Queue}$<$ D, P $>$\-::$\sim${\bf Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_af88c0ebfc35932cdbbd75bae05e7a962}
+
+
+Destructor de la clase \doxyref{Queue}{p.}{class_queue}. 
+
+Llama al método empty\-List, para eliminar la cola. 
+
+\subsection{Member Function Documentation}
+\index{Queue@{Queue}!assign@{assign}}
+\index{assign@{assign}!Queue@{Queue}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Queue}$<$ D, P $>$\-::assign (
+\begin{DoxyParamCaption}
+\item[{P}]{k, }
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_a81e1345ce465a07879f455fd1b6e086e}
+Metodo assign, irrelevante para la cola 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_acb062aa988f4048498b30a2d845a311b}.
+
+\index{Queue@{Queue}!empty\-List@{empty\-List}}
+\index{empty\-List@{empty\-List}!Queue@{Queue}}
+\subsubsection[{empty\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Queue}$<$ D, P $>$\-::empty\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_a37e23ca9e4ac29be510833bf6b7f6638}
+Metodo empty\-List, elimina todos los elementos pertenecientes a la cola. 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a24b4f177a70215980e81ef7b2981fa1e}.
+
+\index{Queue@{Queue}!find@{find}}
+\index{find@{find}!Queue@{Queue}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf Queue}$<$ D, P $>$\-::find (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_a5c5ad7000d15506d3ec9c2ef6c8e6041}
+Metodo find, irrelevante para la cola 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a2b40d6fffc7b2fb5138b648f52c839ee}.
+
+\index{Queue@{Queue}!get@{get}}
+\index{get@{get}!Queue@{Queue}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ D {\bf Queue}$<$ D, P $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_a55cdbb6d999ef9a7a7afa5e39759701e}
+Metodo get, irrelevante para la cola 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a5bd565e668247ae0691983227367cc88}.
+
+\index{Queue@{Queue}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!Queue@{Queue}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ int {\bf Queue}$<$ D, P $>$\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_ab2c7217e6737bf579493b321184a2db3}
+Metodo get\-Size, da el tamaño de la cola. \begin{DoxyReturn}{Returns}
+tamaño 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_af213bbcf13ee436a0f04cde66e337672}.
+
+\index{Queue@{Queue}!insert@{insert}}
+\index{insert@{insert}!Queue@{Queue}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Queue}$<$ D, P $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_a7ec42e8971ed9f3d1d35cdcffaab422a}
+
+
+Metodo de insercion de elementos a la cola. 
+
+Dichos elementos solo pueden ser ingresados al final de la cola. Si la cola esta vacia, al insertar el elemento, este tendra los punteros first y last apuntando a él. De lo contrario, se crea la conexión entre el penúltimo elemento y el elemento agregado, y el puntero last apuntará a este elemento. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato tipo D que será ingresado a la cola. \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a01f588d87d47f8332928eca38f7b11bb}.
+
+\index{Queue@{Queue}!next@{next}}
+\index{next@{next}!Queue@{Queue}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf Queue}$<$ D, P $>$\-::next (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_aa4c9b83f260a172e1fffc389f354386f}
+Metodo next, irrelevante para la cola 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a4ec3e88e176bb45bc49b030d1c8abb3f}.
+
+\index{Queue@{Queue}!prev@{prev}}
+\index{prev@{prev}!Queue@{Queue}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf Queue}$<$ D, P $>$\-::prev (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_adcb9a0e709ea65bc7e98f7e9cbae8a39}
+Metodo prev, irrelevante para la cola 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_acc1831ae92a288345ef20cb29f3846b2}.
+
+\index{Queue@{Queue}!print\-List@{print\-List}}
+\index{print\-List@{print\-List}!Queue@{Queue}}
+\subsubsection[{print\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Queue}$<$ D, P $>$\-::print\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_aa461f8fb363f960a6e0eb34b18503eaa}
+Metodo print\-List, imprime la cola 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a8b34931e187e7e6b86aad86510ce4f3b}.
+
+\index{Queue@{Queue}!remove@{remove}}
+\index{remove@{remove}!Queue@{Queue}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Queue}$<$ D, P $>$\-::remove (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_a554993da9edb157443b0d956f11c8354}
+Metodo que remueve el ultimo elemento de la cola. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato tipo D. Irrelevante para la cola. \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a14fc4e853102018df78db3899aa00d71}.
+
+\index{Queue@{Queue}!sort@{sort}}
+\index{sort@{sort}!Queue@{Queue}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Queue}$<$ D, P $>$\-::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_queue_a896b0e1bcac0d660079eb838c1823446}
+Metodo sort, irrelevante para la cola 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_ae3795939f27cf3e688cd470450e0c27a}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Queue.\-h\end{DoxyCompactItemize}

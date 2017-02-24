@@ -1,0 +1,299 @@
+\section{List\-With\-Array$<$ D, P $>$ Class Template Reference}
+\label{class_list_with_array}\index{List\-With\-Array$<$ D, P $>$@{List\-With\-Array$<$ D, P $>$}}
+
+
+Inheritance diagram for List\-With\-Array$<$ D, P $>$\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_list_with_array__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for List\-With\-Array$<$ D, P $>$\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_list_with_array__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf List\-With\-Array} ()
+\begin{DoxyCompactList}\small\item\em Constructor \doxyref{List\-With\-Array}{p.}{class_list_with_array}. \end{DoxyCompactList}\item 
+{\bf List\-With\-Array} (int t)
+\begin{DoxyCompactList}\small\item\em Constructor por copia de \doxyref{List\-With\-Array}{p.}{class_list_with_array}. \end{DoxyCompactList}\item 
+{\bfseries List\-With\-Array} (const {\bf List\-With\-Array} \&orig)\label{class_list_with_array_a760ab3b39abb104e76a1fdbd2d303cc2}
+
+\item 
+{\bf $\sim$\-List\-With\-Array} ()\label{class_list_with_array_a1886482555430b0f3eb5ebe02cbb0c87}
+
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \doxyref{List\-With\-Array}{p.}{class_list_with_array}. \end{DoxyCompactList}\item 
+void {\bf insert} (D d)
+\begin{DoxyCompactList}\small\item\em Se inserta un elemento d a la lista. \end{DoxyCompactList}\item 
+void {\bf remove} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo remove. \end{DoxyCompactList}\item 
+P {\bf find} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo find. \end{DoxyCompactList}\item 
+D {\bf get} (P k)
+\begin{DoxyCompactList}\small\item\em Metodo get. \end{DoxyCompactList}\item 
+void {\bf assign} (P k, D d)
+\item 
+void {\bf sort} ()
+\begin{DoxyCompactList}\small\item\em Metodo Sort. \end{DoxyCompactList}\item 
+int {\bf get\-Size} ()
+\begin{DoxyCompactList}\small\item\em Metodo get\-Size. \end{DoxyCompactList}\item 
+void {\bf print\-List} ()
+\begin{DoxyCompactList}\small\item\em Metodo print\-List. \end{DoxyCompactList}\item 
+P {\bf next} (P k)
+\begin{DoxyCompactList}\small\item\em Metodo next. \end{DoxyCompactList}\item 
+P {\bf prev} (P k)
+\begin{DoxyCompactList}\small\item\em Metodo prev. \end{DoxyCompactList}\item 
+void {\bf empty\-List} ()
+\begin{DoxyCompactList}\small\item\em Metodo empty\-List. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf n}\label{class_list_with_array_aa6b1712d5b006406885ee5c009d74800}
+
+\begin{DoxyCompactList}\small\item\em Numero de elementos de la lista. \end{DoxyCompactList}\item 
+int {\bf max\-Elements}\label{class_list_with_array_ae53e52b0fc76b833e247c1a00def10ff}
+
+\begin{DoxyCompactList}\small\item\em Maxima cantidad de elementos que puede contener el arreglo. \end{DoxyCompactList}\item 
+P {\bf last}\label{class_list_with_array_a269702c543590d3a63d5e00f0066dd9b}
+
+\begin{DoxyCompactList}\small\item\em Ultimo posicion de la lista. \end{DoxyCompactList}\item 
+D $\ast$ {\bf data}\label{class_list_with_array_a543b4698898dc963eac3ac6aa8f790ab}
+
+\begin{DoxyCompactList}\small\item\em Puntero que apunda al contenido de un elemento de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{List\-With\-Array@{List\-With\-Array}!List\-With\-Array@{List\-With\-Array}}
+\index{List\-With\-Array@{List\-With\-Array}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{List\-With\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ {\bf List\-With\-Array}$<$ D, P $>$\-::{\bf List\-With\-Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_list_with_array_a06f0e8035e9cc43aff4d32c46a00fcf0}
+
+
+Constructor \doxyref{List\-With\-Array}{p.}{class_list_with_array}. 
+
+Crea el objeto tipo \doxyref{List\-With\-Array}{p.}{class_list_with_array}. Se inicializan los atributos de la clase a un valor neutro. Se asigna nullptr a los punteros y 0 a la cantidad de elementos. \index{List\-With\-Array@{List\-With\-Array}!List\-With\-Array@{List\-With\-Array}}
+\index{List\-With\-Array@{List\-With\-Array}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{List\-With\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ {\bf List\-With\-Array}$<$ D, P $>$\-::{\bf List\-With\-Array} (
+\begin{DoxyParamCaption}
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_list_with_array_a3a6d11f203fb0f7e458672e85db26b03}
+
+
+Constructor por copia de \doxyref{List\-With\-Array}{p.}{class_list_with_array}. 
+
+Crea el objeto tipo \doxyref{List\-With\-Array}{p.}{class_list_with_array}. Se crea un arreglo de tamaño t y de tipo D. 
+\begin{DoxyParams}{Parameters}
+{\em t} & es la cantidad de elementos. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{List\-With\-Array@{List\-With\-Array}!assign@{assign}}
+\index{assign@{assign}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf List\-With\-Array}$<$ D, P $>$\-::assign (
+\begin{DoxyParamCaption}
+\item[{P}]{k, }
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_a9dd1fd2337c6c8d437de71aae0e816c8}
+Metodo virtual assign, asigna a una determinada posicion k, el valor d 
+\begin{DoxyParams}{Parameters}
+{\em k} & dato tipo P, es una posicion o celda. \\
+\hline
+{\em d} & dado tipo D, que se quiere asignar a k \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_acb062aa988f4048498b30a2d845a311b}.
+
+\index{List\-With\-Array@{List\-With\-Array}!empty\-List@{empty\-List}}
+\index{empty\-List@{empty\-List}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{empty\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf List\-With\-Array}$<$ D, P $>$\-::empty\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_a2179e228f285cc29b46bd5d13ba0b4ed}
+
+
+Metodo empty\-List. 
+
+Este metodo vacia la pila. La cantidad de elementos se asigna como 0. 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a24b4f177a70215980e81ef7b2981fa1e}.
+
+\index{List\-With\-Array@{List\-With\-Array}!find@{find}}
+\index{find@{find}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf List\-With\-Array}$<$ D, P $>$\-::find (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_a9a054a6d407dc5cb39575739fe412fff}
+
+
+Metodo find. 
+
+Se busca un elemento d en la lista. Se recorre la lista y si se encuentra un elemento igual a d, se retorna un indice i que indica la posicion en el arreglo de este elemento. En caso de que no se encuentre se retorna -\/1. 
+\begin{DoxyParams}{Parameters}
+{\em d} & es el elemento del tipo D que se desea buscar en la lista. \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a2b40d6fffc7b2fb5138b648f52c839ee}.
+
+\index{List\-With\-Array@{List\-With\-Array}!get@{get}}
+\index{get@{get}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ D {\bf List\-With\-Array}$<$ D, P $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_a20cfc82811967bc2a77a6e43b9cebb46}
+
+
+Metodo get. 
+
+Retorna el contenido en el arreglo data, en la posicion k. \begin{DoxyReturn}{Returns}
+k, indica el indice de la lista. 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a5bd565e668247ae0691983227367cc88}.
+
+\index{List\-With\-Array@{List\-With\-Array}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ int {\bf List\-With\-Array}$<$ D, P $>$\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_ae7a071bcdde9ddbf4c40a716f5a09434}
+
+
+Metodo get\-Size. 
+
+Retorna la cantidad de elementos de la lista \begin{DoxyReturn}{Returns}
+n, es posible determinar el tamaño de la lista con el atributo n. 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_af213bbcf13ee436a0f04cde66e337672}.
+
+\index{List\-With\-Array@{List\-With\-Array}!insert@{insert}}
+\index{insert@{insert}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf List\-With\-Array}$<$ D, P $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_afa0b6d215c2cc1d3fe6b9b48d6b6917d}
+
+
+Se inserta un elemento d a la lista. 
+
+Se inserta el elemento de la siguiente forma. En caso de que la lista este vacia, se crea por defecto un arreglo de tamaño 10, donde se asigna 10 como la maxima cantidad de elementos de la lista, y se guarda d en el arreglo data en la posicion 0. En caso de que la lista no este vacia, y aun no alcance su maxima cantidad de elementos se guarda d en el arreglo data en la posicion last. En caso de que el arreglo este lleno, se crea un arreglo nuevo del doble de tamaño, se reajusta la maxima cantidad de elementos y ahora si es posible insertar el valor en la posicion last del arreglo data. 
+\begin{DoxyParams}{Parameters}
+{\em d} & es el elemento del tipo D que se desea ingresar en la lista. \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a01f588d87d47f8332928eca38f7b11bb}.
+
+\index{List\-With\-Array@{List\-With\-Array}!next@{next}}
+\index{next@{next}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf List\-With\-Array}$<$ D, P $>$\-::next (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_a125811011abb77c1b11e5150f4524fb1}
+
+
+Metodo next. 
+
+Este metodo es util para encontrar el elemento siguiente a otro elemento de la lista. \begin{DoxyReturn}{Returns}
+retorna k+1 en caso de que el elemento k tenga un elemento siguiente. caso contrario retorna -\/1, lo que indica que no hay elemento siguiente. 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a4ec3e88e176bb45bc49b030d1c8abb3f}.
+
+\index{List\-With\-Array@{List\-With\-Array}!prev@{prev}}
+\index{prev@{prev}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf List\-With\-Array}$<$ D, P $>$\-::prev (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_a72f0d74c4ae1fd4697088114db41d442}
+
+
+Metodo prev. 
+
+Este metodo es util para encontrar el elemento previo a otro elemento de la lista. \begin{DoxyReturn}{Returns}
+retorna k-\/1 en caso de que el elemento k tenga un elemento previo. caso contrario retorna -\/1, lo que indica que no hay elemento previo. 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_acc1831ae92a288345ef20cb29f3846b2}.
+
+\index{List\-With\-Array@{List\-With\-Array}!print\-List@{print\-List}}
+\index{print\-List@{print\-List}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{print\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf List\-With\-Array}$<$ D, P $>$\-::print\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_a515ea38cb40ba7b0c9df98825b2dd270}
+
+
+Metodo print\-List. 
+
+Imprime la lista. La lista se ve en pantalla en orden descendente, donde los elementos que se agregan a la lista van abajo. Se imprime c recorriendo todos sus elementos e imprimiendo el dato. A partir del metodo \doxyref{get()}{p.}{class_list_with_array_a20cfc82811967bc2a77a6e43b9cebb46}. 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a8b34931e187e7e6b86aad86510ce4f3b}.
+
+\index{List\-With\-Array@{List\-With\-Array}!remove@{remove}}
+\index{remove@{remove}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf List\-With\-Array}$<$ D, P $>$\-::remove (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_aaa18e76fc128ca05151178d914901ec3}
+
+
+Metodo remove. 
+
+Se busca un elemento d en la lista. En caso de que exista lo remuevo reacomodando la lista. Disminuyo en 1 la cantidad de elementos y a last. 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a14fc4e853102018df78db3899aa00d71}.
+
+\index{List\-With\-Array@{List\-With\-Array}!sort@{sort}}
+\index{sort@{sort}!ListWithArray@{List\-With\-Array}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf List\-With\-Array}$<$ D, P $>$\-::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_with_array_a1a0ec4ab4a8fcb1a20568445ad892c9a}
+
+
+Metodo Sort. 
+
+Mediante el algoritmo de ordenamiento Bubble Sort, se ordenan los elementos de la lista en orden creciente. 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_ae3795939f27cf3e688cd470450e0c27a}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+List\-With\-Array.\-h\end{DoxyCompactItemize}

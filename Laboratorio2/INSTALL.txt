@@ -1,0 +1,7 @@
+Laboratorio 2 - Grupo 0.
+  Instrucciones para ejecutar el programa:
+  1- Para compilar: make build.
+  2- Para correr el programa: make run.
+  3- Para limpiar los archivos ejecutables: make clean.
+
+  4-Si desea realizar todos los anteriores con un solo comando: make.
