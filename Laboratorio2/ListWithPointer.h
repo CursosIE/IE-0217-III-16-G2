@@ -17,7 +17,6 @@ class ListWithPointer : public List<D, P> {
         
         void insert(D d) { 
             P c = new Cell<D>(new D(d), nullptr);
-            cout<<"Se agrego un valor"<<endl;
             if(this->getSize()==0)
             {
                 this->first = this->last = c;
@@ -30,7 +29,6 @@ class ListWithPointer : public List<D, P> {
                 this->last = c;
             }
             this->n++;
-            cout<<"El valor de n es:" << n <<endl;
             
         }
         
@@ -75,6 +73,7 @@ class ListWithPointer : public List<D, P> {
                     }
                 }
             }
+            cout<<"El valor " << d <<" no esta en la lista"<<endl;
                 return nullptr;
         }
         
@@ -87,7 +86,19 @@ class ListWithPointer : public List<D, P> {
         }
         
         void sort() { 
-            
+            for(int i=0;i<getSize();i++){
+                 P temp = first;
+                for(int j =0; j<getSize()-1;j++)
+                {
+                    if(temp && next(temp) && *(temp->data)>*(next(temp)->data))
+                    {
+                        D newtemp=*(temp->data);
+                        *(temp->data)=*(next(temp)->data);
+                        *(next(temp)->data)=newtemp;
+                    }
+                    temp=next(temp);
+                }
+            }
         }
         
         int getSize() { //tamaño
@@ -137,9 +148,7 @@ class ListWithPointer : public List<D, P> {
         void emptyList() {
             while(first)
             {
-                P temp = first;
-                first = first->next;
-                delete temp;
+                remove(*(first->data));
             }
         }
         

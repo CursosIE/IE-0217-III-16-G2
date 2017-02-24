@@ -16,15 +16,15 @@ class Queue : public List<D, P> {
         
         
         void insert(D d) {
-            P new = new Cell<D>(d,nullptr);
+            P newest = new Cell<D>(new D(d),nullptr);
             if(getSize()==0)
             {
-                this->first=this->last=new;
+                this->first=this->last=newest;
             }
             else
             {
-                this->last->next = new;
-                this->last = new;
+                this->last->next = newest;
+                this->last = newest;
             }
            
             n++;
@@ -68,7 +68,14 @@ class Queue : public List<D, P> {
                 for(int i =0; i<this->getSize(); i++)
                 {
                     cout<<*(temp->data)<<endl;
+                    temp=temp->next;
                 }
+                cout<<"-------------------------------------------------------"<<endl;
+            cout<<"-------------------------------------------------------"<<endl;
+            }
+            else
+            {
+                cout<<"La cola esta vacia"<<endl;
             }
         }
         
@@ -80,12 +87,16 @@ class Queue : public List<D, P> {
             
         }
         
-        void emptyList() {
-            P temp = first->next;
-            delete first;
-            first=temp->next;
+        D get(P k){
+        
         }
         
+        void emptyList() {
+           while(first)
+            {
+               remove(*(first->data));
+            }
+        }
         
             int n; //num. elementos
             P first; //
