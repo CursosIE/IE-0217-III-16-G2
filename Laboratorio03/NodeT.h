@@ -1,36 +1,34 @@
-
-
 #ifndef NODET_H
 #define NODET_H
 
 #include <iostream>
 using namespace std;
-//BST node
+//BST NodeT
 
 template <typename D>
-class Node {
+class NodeT {
 public:
 
-    Node* l;
-    Node* r;
-    Node* f;
+    NodeT* l;
+    NodeT* r;
+    NodeT* f;
     D* d;
 
-    Node() {
+    NodeT() {
     }
 
-    Node(Node* l, Node* r, D* d, Node* f) {
+    NodeT(NodeT* l, NodeT* r, D* d, NodeT* f) {
         this->l = l;
         this->d = d;
         this->r = r;
         this->f = f;
     }
 
-    Node(const Node& orig) { // hacerlo
+    NodeT(const NodeT& orig) { // hacerlo
     }
 
-    virtual ~Node() {
-        cout << "deleting node " << this << endl;
+    virtual ~NodeT() {
+        cout << "deleting NodeT " << this << endl;
         if (*(this->f->d) > *(this->d)) {
             this->f->l = nullptr;
         } else {
@@ -45,4 +43,3 @@ public:
 };
 
 #endif /* NODET_H */
-

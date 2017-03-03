@@ -1,12 +1,13 @@
-
 #include <iostream>
 #include "GraphWithArray.h"
-#include "Node.h"
+#include "NodeT.h"
 #include "BinarySearchTree.h"
-#include "Node.h"
+
+#include "NodeT.h"
 #include "Edge.h"
 #include "MyType.h"
 #include "GraphWithPointer.h"
+
 #define D int
 using namespace std;
 
@@ -105,20 +106,7 @@ int main(int argc, char** argv) {
 	cout << endl;
 
 
- //0 to 18,446,744,073,709,551,615
-    //    Node<D>* n0 = new Node<D>(nullptr, nullptr, new D(3), nullptr);
-    //    Node<D>* n1 = new Node<D>(nullptr, nullptr, new D(1), nullptr);
-    //    Node<D>* n2 = new Node<D>(nullptr, nullptr, new D(2), nullptr);
-    //    Node<D>* n3 = new Node<D>(nullptr, nullptr, new D(4), nullptr);
-    //
-    //    n0->l = n1;
-    //    n0->r = n3;
-    //    n1->r = n2;
-    //
-    //    BinarySearchTree<D>* bst0 = new BinarySearchTree<D>(n0);
-    //    bst0->printTree();
-    //    cout << "======" << endl;
-    //
+
     BinarySearchTree<D>* bst1 = new BinarySearchTree<D>(new D(3));
     bst1->insert(new D(4));
     bst1->insert(new D(1));
@@ -131,7 +119,7 @@ int main(int argc, char** argv) {
 
 cout << "Cantidad de nodos: " << bst1->nodes << endl;
 
-    Node<D>* r = bst1->find(new D(666));
+    NodeT<D>* r = bst1->find(new D(666));
     if (r) {
         cout << *(r->d) << endl;
     } else {
@@ -159,111 +147,108 @@ cout << "Cantidad de nodos: " << bst1->nodes << endl;
    cout << "balance" << endl;
    bst1->balance();
 
-	cout << endl;
-	cout <<"///////////////////////////////////////////" <<endl;
-	cout <<" Prueba GraphWithPointer:   "<< endl;
-	cout << endl;
+   cout<<""<<endl;
+   cout<<""<<endl;
+   cout<<""<<endl;
+
+       cout<<"GraphWithPointer"<<endl;
+       GraphWithPointer<MyType>* g2 = new GraphWithPointer<MyType>();
+       Node<MyType>* nA = g2->addNode(new MyType('a'));
+       Node<MyType>* nB = g2->addNode(new MyType('b'));
+       Node<MyType>* nC = g2->addNode(new MyType('c'));
+       Node<MyType>* nD = g2->addNode(new MyType('d'));
+       Node<MyType>* nE = g2->addNode(new MyType('e'));
+       Node<MyType>* nF = g2->addNode(new MyType('f'));
+       Node<MyType>* nG = g2->addNode(new MyType('g'));
+       Node<MyType>* nH = g2->addNode(new MyType('h'));
 
 
+       g2->addEdge(20,nA,nB);
+       g2->addEdge(80,nA,nD);
+       g2->addEdge(90,nA,nG);
+       g2->addEdge(20,nG,nA);
+       g2->addEdge(10,nB,nF);
+       g2->addEdge(40,nF,nD);
+       g2->addEdge(10,nF,nC);
+       g2->addEdge(50,nC,nF);
+       g2->addEdge(10,nC,nD);
+       g2->addEdge(20,nC,nH);
+       g2->addEdge(10,nD,nC);
+       g2->addEdge(20,nD,nG);
+       g2->addEdge(50,nE,nB);
+       g2->addEdge(30,nE,nG);
 
+       cout<<"Nodos que contiene el grafo"<<endl;
+       cout<<"[";
+       for(int i=0;i<g2->numNodes;i++)
+       {
+           if(i!=g2->numNodes-1)
+           {
+             cout<<**(g2->graph[i]->data)<<",";
+           }
+           else
+           {
+             cout<<**(g2->graph[i]->data)<<"]"<<endl;
+           }
+       }
+       cout<<endl;
+       cout<<endl;
 
- GraphWithPointer<MyType>* g1 = new GraphWithPointer<MyType>();
-    Node<MyType>* nA = g1->addNode(new MyType('a'));
-    Node<MyType>* nB = g1->addNode(new MyType('b'));
-    Node<MyType>* nC = g1->addNode(new MyType('c'));
-    Node<MyType>* nD = g1->addNode(new MyType('d'));
-    Node<MyType>* nE = g1->addNode(new MyType('e'));
-    Node<MyType>* nF = g1->addNode(new MyType('f'));
-    Node<MyType>* nG = g1->addNode(new MyType('g'));
-    Node<MyType>* nH = g1->addNode(new MyType('h'));
+       cout<< "Aristas que contiene el Nodo d:"<<endl;
 
+       cout<<"[";
+       for(int i=0;i<nD->numconexions;i++)
+       {
+         char s = nD->conexions[i].predecessor->data->content;
+         char d = nD->conexions[i].successor->data->content;
+         int w = nD->conexions[i].weight;
+         if(i!=nD->numconexions-1){
+           cout<< "("<<s<<" to "<<d<<":"<<w<<"),";
+         }
+         else
+         {
+           cout<< "("<<s<<" to "<<d<<":"<<w<<")]"<<endl;
+         }
+       }
+       cout<<endl;
+       cout<<endl;
 
-    g1->addEdge(20,nA,nB);
-    g1->addEdge(80,nA,nD);
-    g1->addEdge(90,nA,nG);
-    g1->addEdge(20,nG,nA);
-    g1->addEdge(10,nB,nF);
-    g1->addEdge(40,nF,nD);
-    g1->addEdge(10,nF,nC);
-    g1->addEdge(50,nC,nF);
-    g1->addEdge(10,nC,nD);
-    g1->addEdge(20,nC,nH);
-    g1->addEdge(10,nD,nC);
-    g1->addEdge(20,nD,nG);
-    g1->addEdge(50,nE,nB);
-    g1->addEdge(30,nE,nG);
+       cout<<"Pesos para llegar de c a cada uno de los otros nodos:"<<endl;
+       double* route1 = g2->dijkstra(g2->bfs(new MyType('c')));
+       delete [] route1;
+       cout<<endl;
+       cout<<endl;
 
-    cout<<"Nodos que contiene el grafo"<<endl;
-    cout<<"[";
-    for(int i=0;i<g1->numNodes;i++)
-    {
-        if(i!=g1->numNodes-1)
-        {
-          cout<<**(g1->graph[i]->data)<<",";
-        }
-        else
-        {
-          cout<<**(g1->graph[i]->data)<<"]"<<endl;
-        }
-    }
-    cout<<endl;
-    cout<<endl;
+       cout<<"Pesos para llegar de cada uno de los nodos dentro del grafo a los otros nodos:"<<endl;
+       double** routes = g2->floyd ();
+       cout<<endl;
+       cout<<endl;
 
-    cout<< "Aristas que contiene el Nodo d:"<<endl;
+       cout<<"Se elimina el nodo c"<<endl;
+       g2->delNode(new MyType('c'));
+       cout<<endl;
+       cout<<endl;
 
-    cout<<"[";
-    for(int i=0;i<nD->numconexions;i++)
-    {
-      char s = nD->conexions[i].predecessor->data->content;
-      char d = nD->conexions[i].successor->data->content;
-      int w = nD->conexions[i].weight;
-      if(i!=nD->numconexions-1){
-        cout<< "("<<s<<" to "<<d<<":"<<w<<"),";
-      }
-      else
-      {
-        cout<< "("<<s<<" to "<<d<<":"<<w<<")]"<<endl;
-      }
-    }
-    cout<<endl;
-    cout<<endl;
+       cout<<"Nodos que contiene el grafo"<<endl;
+       cout<<"[";
+       for(int i=0;i<g2->numNodes;i++)
+       {
+           if(i!=g2->numNodes-1)
+           {
+             cout<<**(g2->graph[i]->data)<<",";
+           }
+           else
+           {
+             cout<<**(g2->graph[i]->data)<<"]"<<endl;
+           }
+       }
+       cout<<endl;
+       cout<<endl;
 
-    cout<<"Pesos para llegar de c a cada uno de los otros nodos:"<<endl;
-    double* route1 = g1->dijkstra(g1->bfs(new MyType('c')));
-    delete [] route1;
-    cout<<endl;
-    cout<<endl;
-
-    cout<<"Pesos para llegar de cada uno de los nodos dentro del grafo a los otros nodos:"<<endl;
-    double** routes = g1->floyd ();
-    cout<<endl;
-    cout<<endl;
-
-    cout<<"Se elimina el nodo c"<<endl;
-    g1->delNode(new MyType('c'));
-    cout<<endl;
-    cout<<endl;
-
-    cout<<"Nodos que contiene el grafo"<<endl;
-    cout<<"[";
-    for(int i=0;i<g1->numNodes;i++)
-    {
-        if(i!=g1->numNodes-1)
-        {
-          cout<<**(g1->graph[i]->data)<<",";
-        }
-        else
-        {
-          cout<<**(g1->graph[i]->data)<<"]"<<endl;
-        }
-    }
-    cout<<endl;
-    cout<<endl;
-
-    cout<<"Busqueda mediante dfs de c"<<endl;
-    g1->dfs(new MyType('c'));
-    cout<<endl;
-cout<<endl;
+       cout<<"Busqueda mediante dfs de c"<<endl;
+       g2->dfs(new MyType('c'));
+       cout<<endl;
+       cout<<endl;
 
     return 0;
 }
