@@ -22,14 +22,15 @@ void Trie::create(string textFile)
         //cout<<"Creando arbol"<<endl;
         while(!file.eof())
         {
-            char* word[1]={};
+            char* word;
             char buf[maxchars];
             file.getline(buf,maxchars);
             int n=0;
-            word[0]=strtok(buf,DELIMITER);
-            //cout<<*word<<endl;
-            if(*word != nullptr){
-                insert(this->trieTree, *word);
+            word=strtok(buf,DELIMITER);
+            if(word!=NULL)
+            {
+                cout<<word<<endl;
+                insert(this->trieTree,word);
             }
         }
     }
