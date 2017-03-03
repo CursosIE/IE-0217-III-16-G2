@@ -1,20 +1,19 @@
 #include <cstdlib>
 #include "TrieNode.h"
 #include "Trie.h"
+#include <cstring>
 using namespace std;
 
 int main(int argc, char** argv) {
     
-    Trie* A1 = new Trie; 
-    A1->insert(A1->trieTree,"abba");
-    A1->insert(A1->trieTree,"avion");
-    A1->insert(A1->trieTree,"caloria");
-    A1->insert(A1->trieTree,"calor");
-    A1->insert(A1->trieTree,"zorro");
-    A1->search(A1->trieTree,"abba");
-    A1->search(A1->trieTree,"carro");
+    Trie* a1 = new Trie; 
+    a1->create("textFile.txt");
     
-    delete A1;
+    string str ="address";
+    char* c = const_cast<char *>(str.c_str());
+    TrieNode* a = a1->search(a1->trieTree,c);
+    
+    delete a1;
     return 0;
 }
 

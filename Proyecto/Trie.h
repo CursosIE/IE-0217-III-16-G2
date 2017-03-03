@@ -1,6 +1,10 @@
 #ifndef TRIE_H
 #define TRIE_H
 
+#include <fstream>
+#include <string>
+#include <cstring>
+#include <sstream>
 #include <iostream>
 #include "TrieNode.h"
 
@@ -11,6 +15,7 @@ class Trie {
 public:
     Trie();
     virtual ~Trie();
+    void create(string textFile);
     void insert(TrieNode* trieTree, char* word);
     TrieNode* search(TrieNode* trieTree, char* word);
     TrieNode* trieTree;

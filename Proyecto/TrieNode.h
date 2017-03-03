@@ -11,7 +11,6 @@ public:
     bool EOW;
     TrieNode* children[ALPHABET_SIZE] = {};
     TrieNode();
-    void printArray();
     virtual ~TrieNode();
 private:
 
