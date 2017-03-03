@@ -1,0 +1,305 @@
+\section{Stack$<$ D, P $>$ Class Template Reference}
+\label{class_stack}\index{Stack$<$ D, P $>$@{Stack$<$ D, P $>$}}
+
+
+{\ttfamily \#include $<$Stack.\-h$>$}
+
+
+
+Inheritance diagram for Stack$<$ D, P $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_stack__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Stack$<$ D, P $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_stack__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Stack} ()
+\begin{DoxyCompactList}\small\item\em Constructor \doxyref{Stack}{p.}{class_stack}. \end{DoxyCompactList}\item 
+void {\bf insert} (D $\ast$d)
+\begin{DoxyCompactList}\small\item\em Metodo Insert. \end{DoxyCompactList}\item 
+void {\bf remove} (D d)
+\begin{DoxyCompactList}\small\item\em Metodo remove. \end{DoxyCompactList}\item 
+void {\bf pop} ()
+\item 
+P {\bf find} (D d)
+\item 
+void {\bf assign} (P k, D d)
+\item 
+void {\bf sort} ()
+\item 
+int {\bf get\-Size} ()
+\begin{DoxyCompactList}\small\item\em Metodo get\-Size. \end{DoxyCompactList}\item 
+void {\bf print\-List} ()
+\begin{DoxyCompactList}\small\item\em Metodo print\-List. \end{DoxyCompactList}\item 
+P {\bf next} (P k)
+\item 
+P {\bf prev} (P k)
+\begin{DoxyCompactList}\small\item\em Metodo prev. \end{DoxyCompactList}\item 
+D {\bf get} (P k)
+\item 
+void {\bf empty\-List} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf n}
+\item 
+P {\bf first}
+\item 
+P {\bf last}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\subsubsection[{Stack}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ {\bf Stack}$<$ D, P $>$\-::{\bf Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_stack_a6e0f84830cde41cb8d49818842d18d36}
+
+
+Constructor \doxyref{Stack}{p.}{class_stack}. 
+
+Crea el objeto tipo \doxyref{Stack}{p.}{class_stack}. 
+\begin{DoxyParams}{Parameters}
+{\em first} & es un puntero a la primera celda de la pila. \\
+\hline
+{\em last} & es un puntero a la ultima celda de la pila. \\
+\hline
+{\em n} & es la cantidad de elementos en la pila. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Stack@{Stack}!assign@{assign}}
+\index{assign@{assign}!Stack@{Stack}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Stack}$<$ D, P $>$\-::assign (
+\begin{DoxyParamCaption}
+\item[{P}]{k, }
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_ad36bacdff9f82a8718559606b46b145c}
+Metodo virtual assign, asigna a una determinada posicion k, el valor d 
+\begin{DoxyParams}{Parameters}
+{\em k} & dato tipo P, es una posicion o celda. \\
+\hline
+{\em d} & dado tipo D, que se quiere asignar a k \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_acb062aa988f4048498b30a2d845a311b}.
+
+\index{Stack@{Stack}!empty\-List@{empty\-List}}
+\index{empty\-List@{empty\-List}!Stack@{Stack}}
+\subsubsection[{empty\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Stack}$<$ D, P $>$\-::empty\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_a8d4119c8d4be2822f20a525743aa296e}
+Metodo empty\-List, vacia la lista 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a24b4f177a70215980e81ef7b2981fa1e}.
+
+\index{Stack@{Stack}!find@{find}}
+\index{find@{find}!Stack@{Stack}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf Stack}$<$ D, P $>$\-::find (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_aa8a3a0b773900e44f641e3be9d9345da}
+Metodo virtual find, busca dentro de la lista el dato d. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato tipo D que se desea encontrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+posicion o celda donde se encuentra el dato 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a2b40d6fffc7b2fb5138b648f52c839ee}.
+
+\index{Stack@{Stack}!get@{get}}
+\index{get@{get}!Stack@{Stack}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ D {\bf Stack}$<$ D, P $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_a64eaffbf031ad032772e802ec88378df}
+Metodo virtual get, da el valor que se encuentra almacenado en la posicion k. 
+\begin{DoxyParams}{Parameters}
+{\em k} & dato tipo P, es una posicion o celda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna el valor almacenado en k 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a5bd565e668247ae0691983227367cc88}.
+
+\index{Stack@{Stack}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!Stack@{Stack}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ int {\bf Stack}$<$ D, P $>$\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_a74fc7e5921dfb247f9ad7052c3c4297a}
+
+
+Metodo get\-Size. 
+
+Retorna la cantidad de elementos de la pila. \begin{DoxyReturn}{Returns}
+n, es posible determinar el tamaño de la pila con el atributo n. 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_af213bbcf13ee436a0f04cde66e337672}.
+
+\index{Stack@{Stack}!insert@{insert}}
+\index{insert@{insert}!Stack@{Stack}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Stack}$<$ D, P $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{D $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_afed02ed90b717dc8e34daf02e2d3b586}
+
+
+Metodo Insert. 
+
+Inserta un elemento a la pila. Se crea un objeto newest tipo celda, que almacena al dato d. En caso de que la pila este vacia, se almacena esta celda creada en los punteros last y first . En caso de que la pila no este vacia, se realiza la coneccion de manera que ahora la ultima celda se convierta en la penultima(apuntando a la ultima). Se suma 1 a la cantidad de elementos. 
+\begin{DoxyParams}{Parameters}
+{\em d} & es un dato tipo D que se desea insertar en la pila. \\
+\hline
+{\em newest} & es un objeto tipo P. \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a750822c0f61577bfb5297ea44aebe5a8}.
+
+\index{Stack@{Stack}!next@{next}}
+\index{next@{next}!Stack@{Stack}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf Stack}$<$ D, P $>$\-::next (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_ab7f8f7e4ab10c00769c1debc5391fc17}
+Metodo next, da la posicion o celda que le sigue a k 
+\begin{DoxyParams}{Parameters}
+{\em k} & dato tipo P, es una posicion o celda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la posicion siguiente a k 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a4ec3e88e176bb45bc49b030d1c8abb3f}.
+
+\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Stack}$<$ D, P $>$\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_stack_a9b465ba5e1c0be277775755dd680e52d}
+\index{Stack@{Stack}!prev@{prev}}
+\index{prev@{prev}!Stack@{Stack}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf Stack}$<$ D, P $>$\-::prev (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_a0c0b55f72c9249bfb9252bce1a93458d}
+
+
+Metodo prev. 
+
+Para una pila este metodo no tiene sentido, sin embargo es util para otros metodos de la clase. Este metodo recibe un puntero a un objeto tipo \doxyref{Cell}{p.}{class_cell}, y recorre toda la pila(tal como una lista), buscando que celda apunta a la celda indicada, a partir del atributo next. 
+\begin{DoxyParams}{Parameters}
+{\em k} & es un puntero a un objeto tipo \doxyref{Cell}{p.}{class_cell}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna un puntero a la celda previa si se encontro, caso contrario retorna un nullptr 
+\end{DoxyReturn}
+
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_acc1831ae92a288345ef20cb29f3846b2}.
+
+\index{Stack@{Stack}!print\-List@{print\-List}}
+\index{print\-List@{print\-List}!Stack@{Stack}}
+\subsubsection[{print\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Stack}$<$ D, P $>$\-::print\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_a89b9967c15c83fe7c257a42e49725881}
+
+
+Metodo print\-List. 
+
+Imprime la pila. La pila se ve en pantalla en orden descendente, donde los elementos que se agregan a la pila van abajo. Y por lo tanto es de abajo que se tienen que extraer los valores. Se imprime como si fuese una lista, recorriendo todos sus elementos e imprimiendo el dato correspondiente a cada elemento. 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a8b34931e187e7e6b86aad86510ce4f3b}.
+
+\index{Stack@{Stack}!remove@{remove}}
+\index{remove@{remove}!Stack@{Stack}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Stack}$<$ D, P $>$\-::remove (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_a55637a6d0aed4283776ce2d159c3a58b}
+
+
+Metodo remove. 
+
+Remueve un elemento de la pila. Al ser una pila, se sigue un orden L\-I\-F\-O(\-Last In First Out) Basicamente se asigna la penultima posicion de la pila como la ultima, descartando el elemento que ingreso a la pila mas recientemente. Se resta 1 a la cantidad de elementos. 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_a14fc4e853102018df78db3899aa00d71}.
+
+\index{Stack@{Stack}!sort@{sort}}
+\index{sort@{sort}!Stack@{Stack}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ void {\bf Stack}$<$ D, P $>$\-::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_stack_a75261d2340f1f7b5e61b3770c0550982}
+Metodo virtual sort, ordena la lista 
+
+Implements {\bf List$<$ D, P $>$} \doxyref{}{p.}{class_list_ae3795939f27cf3e688cd470450e0c27a}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Stack@{Stack}!first@{first}}
+\index{first@{first}!Stack@{Stack}}
+\subsubsection[{first}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf Stack}$<$ D, P $>$\-::first}\label{class_stack_a2678111341d8fbcf7a5727334051fe26}
+\index{Stack@{Stack}!last@{last}}
+\index{last@{last}!Stack@{Stack}}
+\subsubsection[{last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ P {\bf Stack}$<$ D, P $>$\-::last}\label{class_stack_ad8eba32e315256e8af67f0383c8f9576}
+\index{Stack@{Stack}!n@{n}}
+\index{n@{n}!Stack@{Stack}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D, typename P$>$ int {\bf Stack}$<$ D, P $>$\-::n}\label{class_stack_a640915a5eb039f4b13945b7fde167e17}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Stack.\-h}\end{DoxyCompactItemize}

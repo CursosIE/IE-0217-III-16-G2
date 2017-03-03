@@ -1,0 +1,283 @@
+\section{Graph\-With\-Pointer$<$ D $>$ Class Template Reference}
+\label{class_graph_with_pointer}\index{Graph\-With\-Pointer$<$ D $>$@{Graph\-With\-Pointer$<$ D $>$}}
+
+
+{\ttfamily \#include $<$Graph\-With\-Pointer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Graph\-With\-Pointer} ()
+\item 
+void {\bf add\-Edge} (double w, {\bf Node}$<$ D $>$ $\ast$s, {\bf Node}$<$ D $>$ $\ast$d)
+\item 
+{\bf Node}$<$ D $>$ $\ast$ {\bf add\-Node} (D $\ast$d)
+\item 
+void {\bf del\-Edge} ({\bf Node}$<$ D $>$ $\ast$s, {\bf Node}$<$ D $>$ $\ast$d)
+\item 
+void {\bf del\-Node} (D $\ast$d)
+\item 
+{\bf Node}$<$ D $>$ $\ast$ {\bf first\-Node} ()
+\item 
+{\bf Node}$<$ D $>$ $\ast$ {\bf next\-Node} ({\bf Node}$<$ D $>$ t)
+\item 
+{\bf Node}$<$ D $>$ $\ast$ {\bf node} (int i)
+\item 
+D $\ast$ {\bf get\-Data} ({\bf Node}$<$ D $>$ $\ast$a)
+\item 
+{\bf Node}$<$ D $>$ $\ast$ {\bf dfs} (D $\ast$d)
+\item 
+{\bf Node}$<$ D $>$ $\ast$ {\bf bfs} (D $\ast$d)
+\item 
+int {\bf index} ({\bf Node}$<$ D $>$ $\ast$s)
+\item 
+double $\ast$ {\bf dijkstra} ({\bf Node}$<$ D $>$ $\ast$s)
+\item 
+double $\ast$$\ast$ {\bf floyd} ()
+\item 
+virtual {\bf $\sim$\-Graph\-With\-Pointer} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Node}$<$ D $>$ $\ast$$\ast$ {\bf graph}
+\begin{DoxyCompactList}\small\item\em Arreglo de tipo \doxyref{Node}{p.}{class_node} Pointer, donde se guardan los nodos que contiene el grafo. \end{DoxyCompactList}\item 
+int {\bf num\-Nodes}
+\begin{DoxyCompactList}\small\item\em Atributo que indica la cantidad de nodos del grafo. \end{DoxyCompactList}\item 
+int {\bf max\-Elements}
+\begin{DoxyCompactList}\small\item\em Atributo que indica la maxima cantidad de elementos que permite graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!Graph\-With\-Pointer@{Graph\-With\-Pointer}}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{Graph\-With\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::{\bf Graph\-With\-Pointer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_a8934daf32ef649a0766f1c90d89746b2}
+Constructor de la clase grafo. \index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!$\sim$\-Graph\-With\-Pointer@{$\sim$\-Graph\-With\-Pointer}}
+\index{$\sim$\-Graph\-With\-Pointer@{$\sim$\-Graph\-With\-Pointer}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{$\sim$\-Graph\-With\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ virtual {\bf Graph\-With\-Pointer}$<$ D $>$\-::$\sim${\bf Graph\-With\-Pointer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_graph_with_pointer_ad6a2f50c3f449b2d5afe5b1cf742d897}
+Destructor de la clase \doxyref{Graph\-With\-Pointer}{p.}{class_graph_with_pointer} 
+
+\subsection{Member Function Documentation}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!add\-Edge@{add\-Edge}}
+\index{add\-Edge@{add\-Edge}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{add\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Pointer}$<$ D $>$\-::add\-Edge (
+\begin{DoxyParamCaption}
+\item[{double}]{w, }
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{s, }
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_a909e93ff72476f3372c0cb8bbfc87c8a}
+add\-Edge, se agrega una arista a conexions del nodo s. 
+\begin{DoxyParams}{Parameters}
+{\em w} & peso \\
+\hline
+{\em s} & source \doxyref{Node}{p.}{class_node} \\
+\hline
+{\em d} & destiny \doxyref{Node}{p.}{class_node} \\
+\hline
+\end{DoxyParams}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!add\-Node@{add\-Node}}
+\index{add\-Node@{add\-Node}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{add\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Node}$<$D$>$$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::add\-Node (
+\begin{DoxyParamCaption}
+\item[{D $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_a7c290766fe59a24e68f07e1eda3b6d1e}
+add\-Node Agrega un nodo a graph 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato que contendrá el nodo agregado. \\
+\hline
+\end{DoxyParams}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!bfs@{bfs}}
+\index{bfs@{bfs}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{bfs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Node}$<$D$>$$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::bfs (
+\begin{DoxyParamCaption}
+\item[{D $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_af1aaad8daf3aaf3a12873495db78c861}
+Breadth first search La busqueda se comienza desde la raíz que es el primer vértice activo. En el siguiente paso se etiquetan como visitados todos los vecinos del vértice activo que no han sido etiquetados. Se continúa etiquetando todos los vecinos de los hijos de v que no hayan sido visitados aún. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El nodo donde se ubica el dato. 
+
+nullptr si el nodo no existe. 
+\end{DoxyReturn}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!del\-Edge@{del\-Edge}}
+\index{del\-Edge@{del\-Edge}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{del\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Pointer}$<$ D $>$\-::del\-Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{s, }
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_ad1434f4f97b3b8f0bbddd67424fa25fa}
+Elimina una arista de la lista de conexiones del nodo s. 
+\begin{DoxyParams}{Parameters}
+{\em s} & source node \\
+\hline
+{\em d} & destiny node \\
+\hline
+\end{DoxyParams}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!del\-Node@{del\-Node}}
+\index{del\-Node@{del\-Node}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{del\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Pointer}$<$ D $>$\-::del\-Node (
+\begin{DoxyParamCaption}
+\item[{D $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_ae8a138fd63b1f3bf87dcab4394fc21d8}
+Elimina el nodo que contiene al dato d de la lista graph. De manera que también elimina todas las aristas que lleguen a dicho nodo. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato que contiene el nodo que se desea borrar. \\
+\hline
+\end{DoxyParams}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!dfs@{dfs}}
+\index{dfs@{dfs}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{dfs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Node}$<$D$>$$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::dfs (
+\begin{DoxyParamCaption}
+\item[{D $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_a485589b0a3ea42b3f1936ef126bac3c8}
+Depth first search. Recorre el grafo, desde su raíz y avanza de vértice en vértice, marcando cada vértice como visitado. La búsqueda siempre avanza hacia un vértice no marcado,internándose “profundamente” en el grafo sin repetir ningún vértice. Cuando se alcanza un vértice cuyos vecinos han sido marcados, se retrocede al anterior vértice visitado y se avanza desde éste. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato buscado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El nodo dentro del grafo donde se ubica el dato. 
+
+nullptr si el nodo que contenga al dato no existe 
+\end{DoxyReturn}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{dijkstra}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ double$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::dijkstra (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_a59e0c06c330024115a07e60dc5172b47}
+Indica el peso correspondiente de ir de un nodo s, a cada uno de los nodos dentro del grafo 
+\begin{DoxyParams}{Parameters}
+{\em s} & source \doxyref{Node}{p.}{class_node} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+arreglo de tipo double. 
+\end{DoxyReturn}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!first\-Node@{first\-Node}}
+\index{first\-Node@{first\-Node}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{first\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Node}$<$D$>$$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::first\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_afd7f08ef73c53d9629089ddf70bf3a83}
+Indica el primer nodo que contiene graph. \begin{DoxyReturn}{Returns}
+el primer nodo. 
+\end{DoxyReturn}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!floyd@{floyd}}
+\index{floyd@{floyd}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{floyd}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ double$\ast$$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::floyd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_a525ca9513db45cfc310e3123104c2ae3}
+Indica el peso que tiene de ir de cada uno de los nodos de graph, a los otros nodos pertenecientes a graph \begin{DoxyReturn}{Returns}
+arreglo en 2\-D de doubles. 
+\end{DoxyReturn}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!get\-Data@{get\-Data}}
+\index{get\-Data@{get\-Data}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ D$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::get\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_ae8400a798378db62b2a610676930ea03}
+Indica el dato que contiene un nodo 
+\begin{DoxyParams}{Parameters}
+{\em a} & Nodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dato que contiene a 
+\end{DoxyReturn}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!index@{index}}
+\index{index@{index}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int {\bf Graph\-With\-Pointer}$<$ D $>$\-::index (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_ade6891f46541a78c4ed580d8fcfb0414}
+Indica la posicion dentro de graph donde se ubica el nodo s 
+\begin{DoxyParams}{Parameters}
+{\em s} & nodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+posicion 
+\end{DoxyReturn}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!next\-Node@{next\-Node}}
+\index{next\-Node@{next\-Node}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{next\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Node}$<$D$>$$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::next\-Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ D $>$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_aa9d671c4afa0c67f6b698d16182b77e8}
+Indica el nodo que le sigue al nodo t. 
+\begin{DoxyParams}{Parameters}
+{\em t} & nodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el nodo siguiente a t 
+\end{DoxyReturn}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!node@{node}}
+\index{node@{node}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Node}$<$D$>$$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::node (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_pointer_ad319cf428f15b976a20106ecb7404af8}
+Indica el nodo que se encuentra en la posición i de graph 
+\begin{DoxyParams}{Parameters}
+{\em i} & posicion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nodo que se encuentra en la posicion i de graph 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!graph@{graph}}
+\index{graph@{graph}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Node}$<$D$>$$\ast$$\ast$ {\bf Graph\-With\-Pointer}$<$ D $>$\-::graph}\label{class_graph_with_pointer_aa0244d4abba9a569013bfeea80d8bdc8}
+
+
+Arreglo de tipo \doxyref{Node}{p.}{class_node} Pointer, donde se guardan los nodos que contiene el grafo. 
+
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!max\-Elements@{max\-Elements}}
+\index{max\-Elements@{max\-Elements}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{max\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int {\bf Graph\-With\-Pointer}$<$ D $>$\-::max\-Elements}\label{class_graph_with_pointer_a43179fee097cf66b2b6c28a8686c0b45}
+
+
+Atributo que indica la maxima cantidad de elementos que permite graph. 
+
+\index{Graph\-With\-Pointer@{Graph\-With\-Pointer}!num\-Nodes@{num\-Nodes}}
+\index{num\-Nodes@{num\-Nodes}!GraphWithPointer@{Graph\-With\-Pointer}}
+\subsubsection[{num\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int {\bf Graph\-With\-Pointer}$<$ D $>$\-::num\-Nodes}\label{class_graph_with_pointer_a6385986823450390617bd282e1833d97}
+
+
+Atributo que indica la cantidad de nodos del grafo. 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Graph\-With\-Pointer.\-h}\end{DoxyCompactItemize}

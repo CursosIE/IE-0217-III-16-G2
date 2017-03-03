@@ -1,0 +1,102 @@
+\section{Edge$<$ D $>$ Class Template Reference}
+\label{class_edge}\index{Edge$<$ D $>$@{Edge$<$ D $>$}}
+
+
+{\ttfamily \#include $<$Edge.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Edge} ()
+\item 
+{\bf Edge} (double w, {\bf Node}$<$ D $>$ $\ast$s, {\bf Node}$<$ D $>$ $\ast$d)
+\item 
+{\bf Edge} (const {\bf Edge}$<$ D $>$ \&orig)
+\item 
+virtual {\bf $\sim$\-Edge} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Node}$<$ D $>$ $\ast$ {\bf predecessor}
+\begin{DoxyCompactList}\small\item\em Puntero que indica el nodo de salida de la arista. \end{DoxyCompactList}\item 
+{\bf Node}$<$ D $>$ $\ast$ {\bf successor}
+\begin{DoxyCompactList}\small\item\em Puntero que indica el nodo de llegada de la arista. \end{DoxyCompactList}\item 
+double {\bf weight}
+\begin{DoxyCompactList}\small\item\em Atributo que corresponde al peso que toma de llegar del nodo de salida al nodo de llegada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename D$>$class Edge$<$ D $>$}
+
+Plantilla de la clase \doxyref{Edge}{p.}{class_edge} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\subsubsection[{Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Edge}$<$ D $>$\-::{\bf Edge} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_edge_ad81f88d2a5cc93695d754baeb0918f75}
+Constructor de la clase \doxyref{Edge}{p.}{class_edge}, inicializa sus atributos en nullptr \index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\subsubsection[{Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Edge}$<$ D $>$\-::{\bf Edge} (
+\begin{DoxyParamCaption}
+\item[{double}]{w, }
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{s, }
+\item[{{\bf Node}$<$ D $>$ $\ast$}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_edge_abcbefbc4c2c98c39b2b6c22ed8c5d197}
+Constructor de la clase \doxyref{Edge}{p.}{class_edge}, inicializa sus atributos segun los valore enviados como parametros(w,s,d) 
+\begin{DoxyParams}{Parameters}
+{\em w} & weight \\
+\hline
+{\em s} & source \\
+\hline
+{\em d} & destiny \\
+\hline
+\end{DoxyParams}
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\subsubsection[{Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Edge}$<$ D $>$\-::{\bf Edge} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge}$<$ D $>$ \&}]{orig}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_edge_a476fcd35753f2375c3e5905e3a852d9c}
+Constructor por copia \index{Edge@{Edge}!$\sim$\-Edge@{$\sim$\-Edge}}
+\index{$\sim$\-Edge@{$\sim$\-Edge}!Edge@{Edge}}
+\subsubsection[{$\sim$\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ virtual {\bf Edge}$<$ D $>$\-::$\sim${\bf Edge} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_edge_aa30e6627706a71f8b2d4f838fe15303c}
+Destructor de la clase \doxyref{Edge}{p.}{class_edge} 
+
+\subsection{Member Data Documentation}
+\index{Edge@{Edge}!predecessor@{predecessor}}
+\index{predecessor@{predecessor}!Edge@{Edge}}
+\subsubsection[{predecessor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$D$>$$\ast$ {\bf Edge}$<$ D $>$\-::predecessor}\label{class_edge_afb8185528f4936a73ec3aa75df3a2da8}
+
+
+Puntero que indica el nodo de salida de la arista. 
+
+\index{Edge@{Edge}!successor@{successor}}
+\index{successor@{successor}!Edge@{Edge}}
+\subsubsection[{successor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$D$>$$\ast$ {\bf Edge}$<$ D $>$\-::successor}\label{class_edge_a40fca6983dee6c9631feafb8d41d0b10}
+
+
+Puntero que indica el nodo de llegada de la arista. 
+
+\index{Edge@{Edge}!weight@{weight}}
+\index{weight@{weight}!Edge@{Edge}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ double {\bf Edge}$<$ D $>$\-::weight}\label{class_edge_a4147d8e7a5b7f44db4ffb6aed49ef569}
+
+
+Atributo que corresponde al peso que toma de llegar del nodo de salida al nodo de llegada. 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Edge.\-h}\end{DoxyCompactItemize}
