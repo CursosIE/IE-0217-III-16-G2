@@ -14,7 +14,7 @@ class BinarySearchTree {
 public:
 
     BinarySearchTree() {
-	nodes=0;    
+	nodes=0;
 	}
 
     BinarySearchTree(Node<Data>* r) {
@@ -103,7 +103,7 @@ public:
             }
         }
 	if(nodes!=0){
-		nodes--;	
+		nodes--;
 	}
     }
 
@@ -117,12 +117,17 @@ public:
         this->preOrder(root);
     }
 
+    /*! Ve si el nodo actual está vacío.
+        Recorre de manera recursiva el subarbol izquierdo.
+        Imprime el valor del nodo actual.
+        Recorre de manera recursiva el subarbol derecho.
+        \param n nodo actual*/
     void inOrder(Node<Data>* n) {
        if (n) {
 	    inOrder(n->l);
             cout << *(n->d) << endl;
 	    inOrder(n->r);
-         } 
+         }
     }
 
     Node<Data>* replacementFor(Node<Data>* n) {
@@ -156,16 +161,28 @@ public:
         return t;
     }
 
+
+    /*! preOrder recorre el árbol para imprimirlo de la siguiente forma:
+        1- Recorre el subarbol a su derecha de manera recursiva.
+        2- Recorre el subarbol a su izquierda de manera recursiva.
+        3- Imprime el contenido del nodo en el que se encuentra.
+        \param n nodo actual
+    */
     void postOrder(Node<Data>* n) {
 	if (n) {
-	    postOrder(n->l);
+	         postOrder(n->l);
             postOrder(n->r);
             cout << *(n->d) << endl;
-            
+
         }
     }
+   /*! preOrder recorre al árbol para imprimir de la siguiente forma:
+    * 1-Imprime el contenido del nodo en el que se encuentra.
+    * 2-Se llama de manera recursiva para recorrer el subarbol izquierdo;
+    * 3-Se llama de manera recursiva para recorrer el subarbol derecho
+    \param n nodo actual*/
 
-    void preOrder(Node<Data>* n) {
+   void preOrder(Node<Data>* n) {
 	 if (n) {
             cout << *(n->d) << endl;
             preOrder(n->l);
@@ -177,21 +194,21 @@ public:
 	    listNodes(n->l, lista);
             lista->insert(*(n->d));
 	    listNodes(n->r, lista);
-         } 
-	
+         }
+
     }
-	
+
    void InsertBalanced(BinarySearchTree<Data>* bst, ListaConArreglo<Data,int>* lista, ListaConArreglo<Data,int>* lista2){
 		if(lista2->n != 0){
 			bst->insert(new Data(lista2->get( lista2->n/2 )));
 			bst->insert(new Data(lista->get(lista->n/2)));
-				
+
 			ListaConArreglo< Data , int >* less1 = new ListaConArreglo< Data , int >();
 			ListaConArreglo< Data , int >* more1 = new ListaConArreglo< Data , int >();
 			ListaConArreglo< Data , int >* less2 = new ListaConArreglo< Data , int >();
 			ListaConArreglo< Data , int >* more2 = new ListaConArreglo< Data , int >();
-	
-			
+
+
 
 			for(int i=0;i<lista->n/2; i++){
 				less1->insert(lista->get(i) );
@@ -240,16 +257,16 @@ public:
 		printTree(bst2->root);
 
 		return *bst2;
-	
-		
+
+
 	}
-	
+
 	else{
 		cout << "El arbol se encuentra balanceado"<<endl;
 	}
 
 	}
-    	
+
 
 
     Node<Data>* root;
@@ -257,4 +274,3 @@ public:
 };
 
 #endif /* BINARYSEARCHTREE_H */
-
