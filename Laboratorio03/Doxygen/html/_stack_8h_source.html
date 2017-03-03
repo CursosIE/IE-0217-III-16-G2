@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Laboratorio 3: Estructuras de datos no lineales
    </div>
-   <div id="projectbrief">Autores: Ericka Zúñiga Calvo y Leonardo Hernández</div>
+   <div id="projectbrief">Creado por: Ericka Zúñiga Calvo y Leonardo Hernández</div>
   </td>
  </tr>
  </tbody>
@@ -61,7 +61,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -70,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,12 +83,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Stack.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_stack_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef STACK_H</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef STACK_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STACK_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_list_8h.html">List.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cell_8h.html">Cell.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;List.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Cell.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> D, <span class="keyword">typename</span> P&gt;</div>
@@ -121,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_stack.html#a55637a6d0aed4283776ce2d159c3a58b">   60</a></span>&#160;        <span class="keywordtype">void</span> <span class="keyword">remove</span>(D d){}</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_stack.html#a9b465ba5e1c0be277775755dd680e52d">   61</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_stack.html#a9b465ba5e1c0be277775755dd680e52d">pop</a>() {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> pop() {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span>(n&gt;1){</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            last= prev(last);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;         n--;</div>
@@ -198,9 +197,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      first=last=<span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_stack.html#a640915a5eb039f4b13945b7fde167e17">  160</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="class_stack.html#a640915a5eb039f4b13945b7fde167e17">n</a>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_stack.html#a2678111341d8fbcf7a5727334051fe26">  161</a></span>&#160;            P <a class="code" href="class_stack.html#a2678111341d8fbcf7a5727334051fe26">first</a>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_stack.html#ad8eba32e315256e8af67f0383c8f9576">  162</a></span>&#160;            P <a class="code" href="class_stack.html#ad8eba32e315256e8af67f0383c8f9576">last</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            P first;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            P last;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;};</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
@@ -211,28 +210,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
 <div class="ttc" id="class_cell_html_a7e0e6c090f8aca70862c2dbc3257e3b9"><div class="ttname"><a href="class_cell.html#a7e0e6c090f8aca70862c2dbc3257e3b9">Cell::next</a></div><div class="ttdeci">Cell * next</div><div class="ttdoc">Puntero que apunta a la celda siguiente. </div><div class="ttdef"><b>Definition:</b> Cell.h:11</div></div>
 <div class="ttc" id="class_stack_html"><div class="ttname"><a href="class_stack.html">Stack</a></div><div class="ttdef"><b>Definition:</b> Stack.h:10</div></div>
-<div class="ttc" id="_cell_8h_html"><div class="ttname"><a href="_cell_8h.html">Cell.h</a></div></div>
 <div class="ttc" id="class_stack_html_ad36bacdff9f82a8718559606b46b145c"><div class="ttname"><a href="class_stack.html#ad36bacdff9f82a8718559606b46b145c">Stack::assign</a></div><div class="ttdeci">void assign(P k, D d)</div><div class="ttdef"><b>Definition:</b> Stack.h:78</div></div>
-<div class="ttc" id="class_stack_html_a9b465ba5e1c0be277775755dd680e52d"><div class="ttname"><a href="class_stack.html#a9b465ba5e1c0be277775755dd680e52d">Stack::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> Stack.h:61</div></div>
 <div class="ttc" id="class_cell_html"><div class="ttname"><a href="class_cell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> Cell.h:8</div></div>
 <div class="ttc" id="class_stack_html_a0c0b55f72c9249bfb9252bce1a93458d"><div class="ttname"><a href="class_stack.html#a0c0b55f72c9249bfb9252bce1a93458d">Stack::prev</a></div><div class="ttdeci">P prev(P k)</div><div class="ttdoc">Metodo prev. </div><div class="ttdef"><b>Definition:</b> Stack.h:138</div></div>
 <div class="ttc" id="class_stack_html_ab7f8f7e4ab10c00769c1debc5391fc17"><div class="ttname"><a href="class_stack.html#ab7f8f7e4ab10c00769c1debc5391fc17">Stack::next</a></div><div class="ttdeci">P next(P k)</div><div class="ttdef"><b>Definition:</b> Stack.h:122</div></div>
 <div class="ttc" id="class_stack_html_a74fc7e5921dfb247f9ad7052c3c4297a"><div class="ttname"><a href="class_stack.html#a74fc7e5921dfb247f9ad7052c3c4297a">Stack::getSize</a></div><div class="ttdeci">int getSize()</div><div class="ttdoc">Metodo getSize. </div><div class="ttdef"><b>Definition:</b> Stack.h:91</div></div>
 <div class="ttc" id="class_list_html"><div class="ttname"><a href="class_list.html">List</a></div><div class="ttdef"><b>Definition:</b> List.h:9</div></div>
 <div class="ttc" id="class_stack_html_a75261d2340f1f7b5e61b3770c0550982"><div class="ttname"><a href="class_stack.html#a75261d2340f1f7b5e61b3770c0550982">Stack::sort</a></div><div class="ttdeci">void sort()</div><div class="ttdef"><b>Definition:</b> Stack.h:82</div></div>
-<div class="ttc" id="class_stack_html_a2678111341d8fbcf7a5727334051fe26"><div class="ttname"><a href="class_stack.html#a2678111341d8fbcf7a5727334051fe26">Stack::first</a></div><div class="ttdeci">P first</div><div class="ttdef"><b>Definition:</b> Stack.h:161</div></div>
-<div class="ttc" id="class_stack_html_a640915a5eb039f4b13945b7fde167e17"><div class="ttname"><a href="class_stack.html#a640915a5eb039f4b13945b7fde167e17">Stack::n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> Stack.h:160</div></div>
-<div class="ttc" id="class_stack_html_ad8eba32e315256e8af67f0383c8f9576"><div class="ttname"><a href="class_stack.html#ad8eba32e315256e8af67f0383c8f9576">Stack::last</a></div><div class="ttdeci">P last</div><div class="ttdef"><b>Definition:</b> Stack.h:162</div></div>
 <div class="ttc" id="class_stack_html_aa8a3a0b773900e44f641e3be9d9345da"><div class="ttname"><a href="class_stack.html#aa8a3a0b773900e44f641e3be9d9345da">Stack::find</a></div><div class="ttdeci">P find(D d)</div><div class="ttdef"><b>Definition:</b> Stack.h:73</div></div>
 <div class="ttc" id="class_stack_html_afed02ed90b717dc8e34daf02e2d3b586"><div class="ttname"><a href="class_stack.html#afed02ed90b717dc8e34daf02e2d3b586">Stack::insert</a></div><div class="ttdeci">void insert(D *d)</div><div class="ttdoc">Metodo Insert. </div><div class="ttdef"><b>Definition:</b> Stack.h:35</div></div>
 <div class="ttc" id="class_stack_html_a8d4119c8d4be2822f20a525743aa296e"><div class="ttname"><a href="class_stack.html#a8d4119c8d4be2822f20a525743aa296e">Stack::emptyList</a></div><div class="ttdeci">void emptyList()</div><div class="ttdef"><b>Definition:</b> Stack.h:155</div></div>
 <div class="ttc" id="class_stack_html_a89b9967c15c83fe7c257a42e49725881"><div class="ttname"><a href="class_stack.html#a89b9967c15c83fe7c257a42e49725881">Stack::printList</a></div><div class="ttdeci">void printList()</div><div class="ttdoc">Metodo printList. </div><div class="ttdef"><b>Definition:</b> Stack.h:104</div></div>
 <div class="ttc" id="class_stack_html_a6e0f84830cde41cb8d49818842d18d36"><div class="ttname"><a href="class_stack.html#a6e0f84830cde41cb8d49818842d18d36">Stack::Stack</a></div><div class="ttdeci">Stack()</div><div class="ttdoc">Constructor Stack. </div><div class="ttdef"><b>Definition:</b> Stack.h:18</div></div>
-<div class="ttc" id="_list_8h_html"><div class="ttname"><a href="_list_8h.html">List.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 2 2017 19:29:07 for Laboratorio 3: Estructuras de datos no lineales by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 2 2017 23:56:52 for Laboratorio 3: Estructuras de datos no lineales by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

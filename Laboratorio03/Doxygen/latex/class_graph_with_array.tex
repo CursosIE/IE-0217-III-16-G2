@@ -1,0 +1,184 @@
+\section{Graph\-With\-Array$<$ D $>$ Class Template Reference}
+\label{class_graph_with_array}\index{Graph\-With\-Array$<$ D $>$@{Graph\-With\-Array$<$ D $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Graph\-With\-Array} ()
+\item 
+int $\ast$$\ast$ {\bf fill\-Matrix} (int size, int $\ast$$\ast$a)
+\item 
+void {\bf add\-Node} (D d, string id)
+\item 
+void {\bf remove\-Node} (string id)
+\item 
+void {\bf add\-Edge} (string id1, string id2, int weight)
+\item 
+void {\bf remove\-Edge} (string id1, string id2)
+\item 
+void {\bf print\-Matrix} ()
+\item 
+void {\bf print\-Nodes} ()
+\item 
+int {\bf get\-Pos} (string id)
+\item 
+int {\bf Direct\-Path\-\_\-1} (string id1, string id2)
+\item 
+int {\bf pos\-\_\-menor} (int $\ast$n)
+\item 
+string {\bf Lesser} (string A, int $\ast$n, string $\ast$n2)
+\item 
+int {\bf Size} (string s1)
+\item 
+int {\bf tam\-Tray} (string s)
+\item 
+int $\ast$ {\bf dijkstra} (string A, string B)
+\item 
+int $\ast$$\ast$ {\bf floyd} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries Nodes}\label{class_graph_with_array_aa49fb4fb43109de534a0149f9e17c54a}
+
+\item 
+D $\ast$ {\bfseries Nodes\-List}\label{class_graph_with_array_af19faa579d1f36fedcdc494868267928}
+
+\item 
+string $\ast$ {\bfseries Node\-Identifier}\label{class_graph_with_array_a8040b0d019b32bcf0e2482feca6a0e61}
+
+\item 
+int $\ast$$\ast$ {\bfseries pm}\label{class_graph_with_array_a0c6134c60c4fd7a7e92b8f9360a04671}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graph\-With\-Array@{Graph\-With\-Array}!Graph\-With\-Array@{Graph\-With\-Array}}
+\index{Graph\-With\-Array@{Graph\-With\-Array}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{Graph\-With\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ {\bf Graph\-With\-Array}$<$ D $>$\-::{\bf Graph\-With\-Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a12995781859dfb146c974ed20be87283}
+Se pretende tratar un grafo mediante una matriz de adyacencias. 
+
+\subsection{Member Function Documentation}
+\index{Graph\-With\-Array@{Graph\-With\-Array}!add\-Edge@{add\-Edge}}
+\index{add\-Edge@{add\-Edge}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{add\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Array}$<$ D $>$\-::add\-Edge (
+\begin{DoxyParamCaption}
+\item[{string}]{id1, }
+\item[{string}]{id2, }
+\item[{int}]{weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_afcebf56a849323eced240b37db3bfd7f}
+Metodo util para agregar una arista entre los nodos id1 e id2 (en esa direccion), cuyo peso es de weight. \index{Graph\-With\-Array@{Graph\-With\-Array}!add\-Node@{add\-Node}}
+\index{add\-Node@{add\-Node}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{add\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Array}$<$ D $>$\-::add\-Node (
+\begin{DoxyParamCaption}
+\item[{D}]{d, }
+\item[{string}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a7d375853bb7e1cae88049e16f15e39de}
+Metodo útil para agregar un nodo a la matriz. A este nodo le corresponde un identificador de tipo string. Esto implica agregar una fila y una columna. Las cuales van a tener valores de -\/1 en sus casillas dado que al crearse son nodos aislados \index{Graph\-With\-Array@{Graph\-With\-Array}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{dijkstra}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int$\ast$ {\bf Graph\-With\-Array}$<$ D $>$\-::dijkstra (
+\begin{DoxyParamCaption}
+\item[{string}]{A, }
+\item[{string}]{B}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a3d72ec2da323dd92d041815f6dffe709}
+retorna cual es la menor distancia entre dos nodos recorriendo a todos los demas. \index{Graph\-With\-Array@{Graph\-With\-Array}!Direct\-Path\-\_\-1@{Direct\-Path\-\_\-1}}
+\index{Direct\-Path\-\_\-1@{Direct\-Path\-\_\-1}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{Direct\-Path\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int {\bf Graph\-With\-Array}$<$ D $>$\-::Direct\-Path\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{string}]{id1, }
+\item[{string}]{id2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a2e5750382f56ac2e9347d3527074b9af}
+retorna el peso de una arista entre los nodos id1 e id2. si alguno de los dos nodos o esta arista nombrada no existen retorna -\/1. \index{Graph\-With\-Array@{Graph\-With\-Array}!fill\-Matrix@{fill\-Matrix}}
+\index{fill\-Matrix@{fill\-Matrix}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{fill\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int$\ast$$\ast$ {\bf Graph\-With\-Array}$<$ D $>$\-::fill\-Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{size, }
+\item[{int $\ast$$\ast$}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_aff2b5ed6269d39005e150deaa6ce2281}
+El metodo fill\-Matrix es util solamente para matrices cuadradas de dimension size. La recorre y pone el valor de -\/1 en todas sus casillas. \index{Graph\-With\-Array@{Graph\-With\-Array}!floyd@{floyd}}
+\index{floyd@{floyd}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{floyd}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int$\ast$$\ast$ {\bf Graph\-With\-Array}$<$ D $>$\-::floyd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a67a351bd23959a41db7aad6ab4b3297b}
+retorna una matriz para cada campo [i][j] donde se asigna la menor distancia para ir del nodo i al nodo j pasando por todos los demas. \index{Graph\-With\-Array@{Graph\-With\-Array}!get\-Pos@{get\-Pos}}
+\index{get\-Pos@{get\-Pos}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int {\bf Graph\-With\-Array}$<$ D $>$\-::get\-Pos (
+\begin{DoxyParamCaption}
+\item[{string}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_af2c38bc5dcefbfe94ccdaf399bdda562}
+Dado un identificador id, retorna la posicion en la lista de identificadores. en caso de que el identificador no corresponda a ningun nodo retorna -\/1 \index{Graph\-With\-Array@{Graph\-With\-Array}!Lesser@{Lesser}}
+\index{Lesser@{Lesser}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{Lesser}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ string {\bf Graph\-With\-Array}$<$ D $>$\-::Lesser (
+\begin{DoxyParamCaption}
+\item[{string}]{A, }
+\item[{int $\ast$}]{n, }
+\item[{string $\ast$}]{n2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a3b4fce82f222c9845f54e53d8fd8484f}
+dado un nodo A, una lista de identificadores n2 y una lista de enteros n(que representa la validez de esos nodos) el metodo retorna el identificador del nodo cuya distancia al nodo con identificador A es la menor, con respecto a los demas nodos V\-A\-L\-I\-D\-O\-S. \index{Graph\-With\-Array@{Graph\-With\-Array}!pos\-\_\-menor@{pos\-\_\-menor}}
+\index{pos\-\_\-menor@{pos\-\_\-menor}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{pos\-\_\-menor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int {\bf Graph\-With\-Array}$<$ D $>$\-::pos\-\_\-menor (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_af87ecf36f6c39b66de554f61f75c576f}
+para una lista de enteros, retorna el menor diferente de -\/1 o retorna -\/1 en caso de que tal elemento no exista. \index{Graph\-With\-Array@{Graph\-With\-Array}!print\-Matrix@{print\-Matrix}}
+\index{print\-Matrix@{print\-Matrix}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{print\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Array}$<$ D $>$\-::print\-Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a1e793d1818b8ce1b5609c09937d637c0}
+Imprime la matriz de adyacencia correspondiente al arbol \index{Graph\-With\-Array@{Graph\-With\-Array}!print\-Nodes@{print\-Nodes}}
+\index{print\-Nodes@{print\-Nodes}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{print\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Array}$<$ D $>$\-::print\-Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_aab8c2a2764f92a67046e6c30d3c7e13f}
+Permite imprimir los nodos del grafo \index{Graph\-With\-Array@{Graph\-With\-Array}!remove\-Edge@{remove\-Edge}}
+\index{remove\-Edge@{remove\-Edge}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{remove\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Array}$<$ D $>$\-::remove\-Edge (
+\begin{DoxyParamCaption}
+\item[{string}]{id1, }
+\item[{string}]{id2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a8dbb178a7444062224e9209eaf4568e6}
+Metodo util para eliminar una arista entre los nodos id1 e id2 (en esa direccion). \index{Graph\-With\-Array@{Graph\-With\-Array}!remove\-Node@{remove\-Node}}
+\index{remove\-Node@{remove\-Node}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{remove\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ void {\bf Graph\-With\-Array}$<$ D $>$\-::remove\-Node (
+\begin{DoxyParamCaption}
+\item[{string}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a93d47381b8f1e7cad892e56cac8f0b0a}
+Metodo util para eliminar nodos del grafo Se elimina la fila y columna correspondiente a ese nodo. Ademas se debe eliminar al nodo de la lista de nodos \index{Graph\-With\-Array@{Graph\-With\-Array}!Size@{Size}}
+\index{Size@{Size}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int {\bf Graph\-With\-Array}$<$ D $>$\-::Size (
+\begin{DoxyParamCaption}
+\item[{string}]{s1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a91081993f67167c8952f3324941851f4}
+Metodo para conocer la cantidad de caracteres de un string. \index{Graph\-With\-Array@{Graph\-With\-Array}!tam\-Tray@{tam\-Tray}}
+\index{tam\-Tray@{tam\-Tray}!GraphWithArray@{Graph\-With\-Array}}
+\subsubsection[{tam\-Tray}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D $>$ int {\bf Graph\-With\-Array}$<$ D $>$\-::tam\-Tray (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_with_array_a06953833239da2624dbd5cac9d364b67}
+Una vez dado un trayecto de nodos por recorrer, representado en un string, se calcula y retorna la distancia que implica recorrer tal camino. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Graph\-With\-Array.\-h\end{DoxyCompactItemize}

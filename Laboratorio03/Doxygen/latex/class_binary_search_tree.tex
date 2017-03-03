@@ -1,0 +1,152 @@
+\section{Binary\-Search\-Tree$<$ Data $>$ Class Template Reference}
+\label{class_binary_search_tree}\index{Binary\-Search\-Tree$<$ Data $>$@{Binary\-Search\-Tree$<$ Data $>$}}
+
+
+Collaboration diagram for Binary\-Search\-Tree$<$ Data $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_binary_search_tree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Binary\-Search\-Tree} ({\bf Node}$<$ {\bf Data} $>$ $\ast$r)\label{class_binary_search_tree_a18ff8e101f7f46ecfa513389e0ee1e6e}
+
+\item 
+{\bfseries Binary\-Search\-Tree} ({\bf Data} $\ast$d)\label{class_binary_search_tree_ae3cc4b261ab41d29a1d098a9987ed43e}
+
+\item 
+{\bfseries Binary\-Search\-Tree} (const {\bf Binary\-Search\-Tree} \&orig)\label{class_binary_search_tree_a950670fa849792208b16e2364606a3c9}
+
+\item 
+void {\bfseries insert} ({\bf Data} $\ast$d)\label{class_binary_search_tree_a2336ba86e7d9803c3979b199fea2ae43}
+
+\item 
+void {\bfseries removing} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n)\label{class_binary_search_tree_aa853db6eed3b39b2db829c715413526b}
+
+\item 
+void {\bfseries remove} ({\bf Data} $\ast$d)\label{class_binary_search_tree_a89e97ae842dae9bf54d5dd27c59ee04c}
+
+\item 
+{\bf Data} $\ast$ {\bfseries get} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n)\label{class_binary_search_tree_a4374a8c6a86507203322aa336651582d}
+
+\item 
+void {\bfseries set} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n, {\bf Data} $\ast$d)\label{class_binary_search_tree_a0b3fa4f1e1d76ced3cabe222ad4edfbd}
+
+\item 
+{\bf Node}$<$ {\bf Data} $>$ $\ast$ {\bfseries finding} ({\bf Data} $\ast$d, {\bf Node}$<$ {\bf Data} $>$ $\ast$n)\label{class_binary_search_tree_af68ea8fa6620026c26c5a5634382d032}
+
+\item 
+{\bf Node}$<$ {\bf Data} $>$ $\ast$ {\bfseries find} ({\bf Data} $\ast$d)\label{class_binary_search_tree_ac560fff2205ef8633b9b35a5c1af568f}
+
+\item 
+void {\bfseries print\-Tree} ()\label{class_binary_search_tree_a4f8f2ce34a8099962133e954122764fa}
+
+\item 
+void {\bf in\-Order} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n)
+\item 
+{\bf Node}$<$ {\bf Data} $>$ $\ast$ {\bfseries replacement\-For} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n)\label{class_binary_search_tree_a828682ddfca43a370878a76e4bf15925}
+
+\item 
+{\bf Node}$<$ {\bf Data} $>$ $\ast$ {\bfseries min\-Greater} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n)\label{class_binary_search_tree_a3daf2b4f29a3916c1a3a74889bb0dcc6}
+
+\item 
+{\bf Node}$<$ {\bf Data} $>$ $\ast$ {\bfseries max\-Lesser} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n)\label{class_binary_search_tree_a9e12b403f7677f13b1a48df59c876a0d}
+
+\item 
+void {\bf post\-Order} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n)
+\item 
+void {\bf pre\-Order} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n)
+\item 
+void {\bf list\-Nodes} ({\bf Node}$<$ {\bf Data} $>$ $\ast$n, {\bf Lista\-Con\-Arreglo}$<$ {\bf Data}, int $>$ $\ast$lista)
+\item 
+void {\bf Insert\-Balanced} ({\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$ $\ast$bst, {\bf Lista\-Con\-Arreglo}$<$ {\bf Data}, int $>$ $\ast$lista, {\bf Lista\-Con\-Arreglo}$<$ {\bf Data}, int $>$ $\ast$lista2)
+\item 
+void {\bfseries print\-Tree} ({\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$ bst)\label{class_binary_search_tree_a63c054c446edeb2003f811bcf9fbe1bb}
+
+\item 
+{\bf Binary\-Search\-Tree} {\bf balance} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Node}$<$ {\bf Data} $>$ $\ast$ {\bfseries root}\label{class_binary_search_tree_ad7242fa25135e33d45ce605c3692b9c0}
+
+\item 
+int {\bfseries level}\label{class_binary_search_tree_a8509e4127898bc6305c8096e1a2e38bb}
+
+\item 
+int {\bfseries nodes}\label{class_binary_search_tree_af174a4f9efd9456210c476f1f97081da}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Binary\-Search\-Tree@{Binary\-Search\-Tree}!balance@{balance}}
+\index{balance@{balance}!BinarySearchTree@{Binary\-Search\-Tree}}
+\subsubsection[{balance}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ {\bf Binary\-Search\-Tree} {\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$\-::balance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_binary_search_tree_abec3330a3ea7e8d768aabb07eeec5e30}
+Retorna un arbol balanceado \index{Binary\-Search\-Tree@{Binary\-Search\-Tree}!in\-Order@{in\-Order}}
+\index{in\-Order@{in\-Order}!BinarySearchTree@{Binary\-Search\-Tree}}
+\subsubsection[{in\-Order}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$\-::in\-Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_binary_search_tree_a902f97ed6c9615116a6abf69e2eda88d}
+Ve si el nodo actual está vacío. Recorre de manera recursiva el subarbol izquierdo. Imprime el valor del nodo actual. Recorre de manera recursiva el subarbol derecho. 
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo actual \\
+\hline
+\end{DoxyParams}
+\index{Binary\-Search\-Tree@{Binary\-Search\-Tree}!Insert\-Balanced@{Insert\-Balanced}}
+\index{Insert\-Balanced@{Insert\-Balanced}!BinarySearchTree@{Binary\-Search\-Tree}}
+\subsubsection[{Insert\-Balanced}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$\-::Insert\-Balanced (
+\begin{DoxyParamCaption}
+\item[{{\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$ $\ast$}]{bst, }
+\item[{{\bf Lista\-Con\-Arreglo}$<$ {\bf Data}, int $>$ $\ast$}]{lista, }
+\item[{{\bf Lista\-Con\-Arreglo}$<$ {\bf Data}, int $>$ $\ast$}]{lista2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_binary_search_tree_a088c657957f96e271ca71be990caa319}
+Dado un arbol y dos listas, ambas con elementos o solamente menores o solamente mayores al root del arbol, de manera estrategica y recursiva se agregan los nodos al arbol para que este quede balanceado. \index{Binary\-Search\-Tree@{Binary\-Search\-Tree}!list\-Nodes@{list\-Nodes}}
+\index{list\-Nodes@{list\-Nodes}!BinarySearchTree@{Binary\-Search\-Tree}}
+\subsubsection[{list\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$\-::list\-Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n, }
+\item[{{\bf Lista\-Con\-Arreglo}$<$ {\bf Data}, int $>$ $\ast$}]{lista}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_binary_search_tree_a2b42976e04f5bee4692910f258d3fb47}
+Para todos los nodos del arbol donde n es root, agrega a la lista con arreglo llamada lista el valor de sus datos. Por la menera de recorrer el arbol notese que la lista queda ordenada en orden ascendente. \index{Binary\-Search\-Tree@{Binary\-Search\-Tree}!post\-Order@{post\-Order}}
+\index{post\-Order@{post\-Order}!BinarySearchTree@{Binary\-Search\-Tree}}
+\subsubsection[{post\-Order}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$\-::post\-Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_binary_search_tree_a556e2a5d6a7818aa6ef66703c4c4419a}
+post\-Order recorre el árbol para imprimirlo de la siguiente forma\-: 1-\/ Recorre el subarbol a su derecha de manera recursiva. 2-\/ Recorre el subarbol a su izquierda de manera recursiva. 3-\/ Imprime el contenido del nodo en el que se encuentra. 
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo actual \\
+\hline
+\end{DoxyParams}
+\index{Binary\-Search\-Tree@{Binary\-Search\-Tree}!pre\-Order@{pre\-Order}}
+\index{pre\-Order@{pre\-Order}!BinarySearchTree@{Binary\-Search\-Tree}}
+\subsubsection[{pre\-Order}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data$>$ void {\bf Binary\-Search\-Tree}$<$ {\bf Data} $>$\-::pre\-Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ {\bf Data} $>$ $\ast$}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_binary_search_tree_ab803878e813cba6c7c84d00b802ad816}
+pre\-Order recorre al árbol para imprimir de la siguiente forma\-: 1-\/\-Imprime el contenido del nodo en el que se encuentra. 2-\/\-Se llama de manera recursiva para recorrer el subarbol izquierdo; 3-\/\-Se llama de manera recursiva para recorrer el subarbol derecho 
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo actual \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Binary\-Search\-Tree.\-h\end{DoxyCompactItemize}

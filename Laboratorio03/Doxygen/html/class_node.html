@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Laboratorio 3: Estructuras de datos no lineales
    </div>
-   <div id="projectbrief">Autores: Ericka Zúñiga Calvo y Leonardo Hernández</div>
+   <div id="projectbrief">Creado por: Ericka Zúñiga Calvo y Leonardo Hernández</div>
   </td>
  </tr>
  </tbody>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,11 +92,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_node_8h_source.html">Node.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Node&lt; D &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_node__coll__graph.png" border="0" usemap="#_node_3_01_d_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_node_3_01_d_01_4_coll__map" id="_node_3_01_d_01_4_coll__map">
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d883b970cbbadb1f7d4785f737fc650"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6d883b970cbbadb1f7d4785f737fc650">Node</a> ()</td></tr>
-<tr class="memdesc:a6d883b970cbbadb1f7d4785f737fc650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="class_node.html">Node</a>, inicializa todos los atributos en nullptr o false, según corresponda.  <a href="#a6d883b970cbbadb1f7d4785f737fc650">More...</a><br/></td></tr>
+<tr class="memitem:a6d883b970cbbadb1f7d4785f737fc650"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d883b970cbbadb1f7d4785f737fc650"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6d883b970cbbadb1f7d4785f737fc650">Node</a> ()</td></tr>
+<tr class="memdesc:a6d883b970cbbadb1f7d4785f737fc650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la clase <a class="el" href="class_node.html">Node</a>, inicializa todos los atributos en nullptr o false, según corresponda. <br/></td></tr>
 <tr class="separator:a6d883b970cbbadb1f7d4785f737fc650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae50cc855125df6d333368d28575b3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#acae50cc855125df6d333368d28575b3e">Node</a> (D *d)</td></tr>
 <tr class="separator:acae50cc855125df6d333368d28575b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,30 +114,55 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a62e95e858c91952f7625e976114bbe8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e0c1e71f6335ea4bf7c6dbbfdcca57e"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a0e0c1e71f6335ea4bf7c6dbbfdcca57e">searchEdge</a> (<a class="el" href="class_node.html">Node</a>&lt; D &gt; *s, <a class="el" href="class_node.html">Node</a>&lt; D &gt; *d)</td></tr>
 <tr class="separator:a0e0c1e71f6335ea4bf7c6dbbfdcca57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b5a080cf05afe6a81e4dd56ba5f90e3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6b5a080cf05afe6a81e4dd56ba5f90e3">~Node</a> ()</td></tr>
-<tr class="memdesc:a6b5a080cf05afe6a81e4dd56ba5f90e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor de la clase <a class="el" href="class_node.html">Node</a>.  <a href="#a6b5a080cf05afe6a81e4dd56ba5f90e3">More...</a><br/></td></tr>
+<tr class="memitem:a6b5a080cf05afe6a81e4dd56ba5f90e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b5a080cf05afe6a81e4dd56ba5f90e3"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6b5a080cf05afe6a81e4dd56ba5f90e3">~Node</a> ()</td></tr>
+<tr class="memdesc:a6b5a080cf05afe6a81e4dd56ba5f90e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor de la clase <a class="el" href="class_node.html">Node</a>. <br/></td></tr>
 <tr class="separator:a6b5a080cf05afe6a81e4dd56ba5f90e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78739f6f3d6164fe37f7d838959d7cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa78739f6f3d6164fe37f7d838959d7cf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Node</b> (<a class="el" href="class_node.html">Node</a> *l, <a class="el" href="class_node.html">Node</a> *r, D *d, <a class="el" href="class_node.html">Node</a> *f)</td></tr>
+<tr class="separator:aa78739f6f3d6164fe37f7d838959d7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe46f0cf6f7350c2fb5207ae9da18359"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe46f0cf6f7350c2fb5207ae9da18359"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Node</b> (const <a class="el" href="class_node.html">Node</a> &amp;orig)</td></tr>
+<tr class="separator:abe46f0cf6f7350c2fb5207ae9da18359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a94c115991edeecf6664eaa4884fbf6ca"><td class="memItemLeft" align="right" valign="top">D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a94c115991edeecf6664eaa4884fbf6ca">data</a></td></tr>
-<tr class="memdesc:a94c115991edeecf6664eaa4884fbf6ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atributo que tiene el dato almacenado en el nodo.  <a href="#a94c115991edeecf6664eaa4884fbf6ca">More...</a><br/></td></tr>
+<tr class="memitem:a94c115991edeecf6664eaa4884fbf6ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94c115991edeecf6664eaa4884fbf6ca"></a>
+D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a94c115991edeecf6664eaa4884fbf6ca">data</a></td></tr>
+<tr class="memdesc:a94c115991edeecf6664eaa4884fbf6ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atributo que tiene el dato almacenado en el nodo. <br/></td></tr>
 <tr class="separator:a94c115991edeecf6664eaa4884fbf6ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd882079b39e0674e0e9e50d2591d136"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_edge.html">Edge</a>&lt; D &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#abd882079b39e0674e0e9e50d2591d136">conexions</a></td></tr>
-<tr class="memdesc:abd882079b39e0674e0e9e50d2591d136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arreglo que contiene todas las aristas que salen del nodo.  <a href="#abd882079b39e0674e0e9e50d2591d136">More...</a><br/></td></tr>
+<tr class="memitem:abd882079b39e0674e0e9e50d2591d136"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd882079b39e0674e0e9e50d2591d136"></a>
+<a class="el" href="class_edge.html">Edge</a>&lt; D &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#abd882079b39e0674e0e9e50d2591d136">conexions</a></td></tr>
+<tr class="memdesc:abd882079b39e0674e0e9e50d2591d136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arreglo que contiene todas las aristas que salen del nodo. <br/></td></tr>
 <tr class="separator:abd882079b39e0674e0e9e50d2591d136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2f396eaa859fbd40a1b44950c0c539d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#aa2f396eaa859fbd40a1b44950c0c539d">numconexions</a></td></tr>
-<tr class="memdesc:aa2f396eaa859fbd40a1b44950c0c539d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numero de aristas que tiene el nodo.  <a href="#aa2f396eaa859fbd40a1b44950c0c539d">More...</a><br/></td></tr>
+<tr class="memitem:aa2f396eaa859fbd40a1b44950c0c539d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2f396eaa859fbd40a1b44950c0c539d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#aa2f396eaa859fbd40a1b44950c0c539d">numconexions</a></td></tr>
+<tr class="memdesc:aa2f396eaa859fbd40a1b44950c0c539d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numero de aristas que tiene el nodo. <br/></td></tr>
 <tr class="separator:aa2f396eaa859fbd40a1b44950c0c539d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a565fd8acc8938a43443f05c7c9e8d896"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a565fd8acc8938a43443f05c7c9e8d896">maxElements</a></td></tr>
-<tr class="memdesc:a565fd8acc8938a43443f05c7c9e8d896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Máxima cantidad de elementos que puede contener el arreglo conexions.  <a href="#a565fd8acc8938a43443f05c7c9e8d896">More...</a><br/></td></tr>
+<tr class="memitem:a565fd8acc8938a43443f05c7c9e8d896"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a565fd8acc8938a43443f05c7c9e8d896"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a565fd8acc8938a43443f05c7c9e8d896">maxElements</a></td></tr>
+<tr class="memdesc:a565fd8acc8938a43443f05c7c9e8d896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Máxima cantidad de elementos que puede contener el arreglo conexions. <br/></td></tr>
 <tr class="separator:a565fd8acc8938a43443f05c7c9e8d896"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac6afde6edec4fcb7be68c96666c1fe2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#aac6afde6edec4fcb7be68c96666c1fe2">beenHere</a></td></tr>
-<tr class="memdesc:aac6afde6edec4fcb7be68c96666c1fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atributo de tipo bool que dice si se ha visitado el nodo.  <a href="#aac6afde6edec4fcb7be68c96666c1fe2">More...</a><br/></td></tr>
+<tr class="memitem:aac6afde6edec4fcb7be68c96666c1fe2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac6afde6edec4fcb7be68c96666c1fe2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#aac6afde6edec4fcb7be68c96666c1fe2">beenHere</a></td></tr>
+<tr class="memdesc:aac6afde6edec4fcb7be68c96666c1fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atributo de tipo bool que dice si se ha visitado el nodo. <br/></td></tr>
 <tr class="separator:aac6afde6edec4fcb7be68c96666c1fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad842fd061f930e3450a62c12ab93db24"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ad842fd061f930e3450a62c12ab93db24">beenTemp</a></td></tr>
-<tr class="memdesc:ad842fd061f930e3450a62c12ab93db24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atributo de tipo bool, que indica si el nodo se ha utilizado para saber la distancia más corta entre un nodo y otro.  <a href="#ad842fd061f930e3450a62c12ab93db24">More...</a><br/></td></tr>
+<tr class="memitem:ad842fd061f930e3450a62c12ab93db24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad842fd061f930e3450a62c12ab93db24"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ad842fd061f930e3450a62c12ab93db24">beenTemp</a></td></tr>
+<tr class="memdesc:ad842fd061f930e3450a62c12ab93db24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atributo de tipo bool, que indica si el nodo se ha utilizado para saber la distancia más corta entre un nodo y otro. <br/></td></tr>
 <tr class="separator:ad842fd061f930e3450a62c12ab93db24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0887ae573dd58274be628313b5170186"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0887ae573dd58274be628313b5170186"></a>
+<a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>l</b></td></tr>
+<tr class="separator:a0887ae573dd58274be628313b5170186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61cefac7cf9a73b5057968706f6931fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61cefac7cf9a73b5057968706f6931fe"></a>
+<a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>r</b></td></tr>
+<tr class="separator:a61cefac7cf9a73b5057968706f6931fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f853af2475252e43c437811478fae1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33f853af2475252e43c437811478fae1"></a>
+<a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>f</b></td></tr>
+<tr class="separator:a33f853af2475252e43c437811478fae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a8975b57edc70d79492408a950c666"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9a8975b57edc70d79492408a950c666"></a>
+D *&#160;</td><td class="memItemRight" valign="bottom"><b>d</b></td></tr>
+<tr class="separator:ab9a8975b57edc70d79492408a950c666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename D&gt;<br/>
@@ -137,33 +170,6 @@ class Node&lt; D &gt;</h3>
 
 <p>Plantilla de la clase <a class="el" href="class_node.html">Node</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a6d883b970cbbadb1f7d4785f737fc650"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt; D &gt;::<a class="el" href="class_node.html">Node</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructor de la clase <a class="el" href="class_node.html">Node</a>, inicializa todos los atributos en nullptr o false, según corresponda. </p>
-
-</div>
-</div>
 <a class="anchor" id="acae50cc855125df6d333368d28575b3e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -194,33 +200,6 @@ template&lt;typename D&gt; </div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a6b5a080cf05afe6a81e4dd56ba5f90e3"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="class_node.html">Node</a>&lt; D &gt;::~<a class="el" href="class_node.html">Node</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destructor de la clase <a class="el" href="class_node.html">Node</a>. </p>
 
 </div>
 </div>
@@ -347,110 +326,14 @@ template&lt;typename D&gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aac6afde6edec4fcb7be68c96666c1fe2"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="class_node.html">Node</a>&lt; D &gt;::beenHere</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Atributo de tipo bool que dice si se ha visitado el nodo. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad842fd061f930e3450a62c12ab93db24"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="class_node.html">Node</a>&lt; D &gt;::beenTemp</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Atributo de tipo bool, que indica si el nodo se ha utilizado para saber la distancia más corta entre un nodo y otro. </p>
-
-</div>
-</div>
-<a class="anchor" id="abd882079b39e0674e0e9e50d2591d136"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_edge.html">Edge</a>&lt;D&gt;* <a class="el" href="class_node.html">Node</a>&lt; D &gt;::conexions</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Arreglo que contiene todas las aristas que salen del nodo. </p>
-
-</div>
-</div>
-<a class="anchor" id="a94c115991edeecf6664eaa4884fbf6ca"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">D* <a class="el" href="class_node.html">Node</a>&lt; D &gt;::data</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Atributo que tiene el dato almacenado en el nodo. </p>
-
-</div>
-</div>
-<a class="anchor" id="a565fd8acc8938a43443f05c7c9e8d896"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="class_node.html">Node</a>&lt; D &gt;::maxElements</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Máxima cantidad de elementos que puede contener el arreglo conexions. </p>
-
-</div>
-</div>
-<a class="anchor" id="aa2f396eaa859fbd40a1b44950c0c539d"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="class_node.html">Node</a>&lt; D &gt;::numconexions</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Numero de aristas que tiene el nodo. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_node_8h_source.html">Node.h</a></li>
+<li><a class="el" href="_node_t_8h_source.html">NodeT.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 2 2017 19:29:07 for Laboratorio 3: Estructuras de datos no lineales by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 2 2017 23:56:52 for Laboratorio 3: Estructuras de datos no lineales by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['list',['List',['../class_list.html',1,'']]]
+  ['edge',['Edge',['../class_edge.html',1,'']]],
+  ['edge_3c_20data_20_3e',['Edge&lt; Data &gt;',['../class_edge.html',1,'']]]
 ];

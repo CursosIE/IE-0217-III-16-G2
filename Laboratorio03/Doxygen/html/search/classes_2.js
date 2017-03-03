@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graphwithpointer',['GraphWithPointer',['../class_graph_with_pointer.html',1,'']]]
+  ['data',['Data',['../class_data.html',1,'']]]
 ];

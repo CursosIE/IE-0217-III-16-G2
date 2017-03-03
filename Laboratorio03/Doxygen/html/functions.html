@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Laboratorio 3: Estructuras de datos no lineales
    </div>
-   <div id="projectbrief">Autores: Ericka Zúñiga Calvo y Leonardo Hernández</div>
+   <div id="projectbrief">Creado por: Ericka Zúñiga Calvo y Leonardo Hernández</div>
   </td>
  </tr>
  </tbody>
@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_q"><span>q</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_w"><span>w</span></a></li>
       <li class="current"><a href="#index_~"><span>~</span></a></li>
     </ul>
@@ -101,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,15 +112,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
+<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>addEdge()
-: <a class="el" href="class_graph_with_pointer.html#a909e93ff72476f3372c0cb8bbfc87c8a">GraphWithPointer&lt; D &gt;</a>
+: <a class="el" href="class_graph_with_array.html#afcebf56a849323eced240b37db3bfd7f">GraphWithArray&lt; D &gt;</a>
+, <a class="el" href="class_graph_with_pointer.html#a909e93ff72476f3372c0cb8bbfc87c8a">GraphWithPointer&lt; D &gt;</a>
 , <a class="el" href="class_node.html#a3e6460cf5b82e6ede4cb1d2fba8ded16">Node&lt; D &gt;</a>
 </li>
 <li>addNode()
-: <a class="el" href="class_graph_with_pointer.html#a7c290766fe59a24e68f07e1eda3b6d1e">GraphWithPointer&lt; D &gt;</a>
+: <a class="el" href="class_graph_with_array.html#a7d375853bb7e1cae88049e16f15e39de">GraphWithArray&lt; D &gt;</a>
+, <a class="el" href="class_graph_with_pointer.html#a7c290766fe59a24e68f07e1eda3b6d1e">GraphWithPointer&lt; D &gt;</a>
 </li>
 <li>assign()
 : <a class="el" href="class_list.html#acb062aa988f4048498b30a2d845a311b">List&lt; D, P &gt;</a>
@@ -130,6 +133,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>balance()
+: <a class="el" href="class_binary_search_tree.html#abec3330a3ea7e8d768aabb07eeec5e30">BinarySearchTree&lt; Data &gt;</a>
+</li>
 <li>beenHere
 : <a class="el" href="class_node.html#aac6afde6edec4fcb7be68c96666c1fe2">Node&lt; D &gt;</a>
 </li>
@@ -171,7 +177,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_graph_with_pointer.html#a485589b0a3ea42b3f1936ef126bac3c8">GraphWithPointer&lt; D &gt;</a>
 </li>
 <li>dijkstra()
-: <a class="el" href="class_graph_with_pointer.html#a59e0c06c330024115a07e60dc5172b47">GraphWithPointer&lt; D &gt;</a>
+: <a class="el" href="class_graph_with_array.html#a3d72ec2da323dd92d041815f6dffe709">GraphWithArray&lt; D &gt;</a>
+, <a class="el" href="class_graph_with_pointer.html#a59e0c06c330024115a07e60dc5172b47">GraphWithPointer&lt; D &gt;</a>
+</li>
+<li>DirectPath_1()
+: <a class="el" href="class_graph_with_array.html#a2e5750382f56ac2e9347d3527074b9af">GraphWithArray&lt; D &gt;</a>
 </li>
 </ul>
 
@@ -189,6 +199,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>fillMatrix()
+: <a class="el" href="class_graph_with_array.html#aff2b5ed6269d39005e150deaa6ce2281">GraphWithArray&lt; D &gt;</a>
+</li>
 <li>find()
 : <a class="el" href="class_list.html#a2b40d6fffc7b2fb5138b648f52c839ee">List&lt; D, P &gt;</a>
 , <a class="el" href="class_queue.html#a5c5ad7000d15506d3ec9c2ef6c8e6041">Queue&lt; D, P &gt;</a>
@@ -196,13 +209,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>first
 : <a class="el" href="class_queue.html#a66d3f4dcd98ff256982192ccd4cbe1d4">Queue&lt; D, P &gt;</a>
-, <a class="el" href="class_stack.html#a2678111341d8fbcf7a5727334051fe26">Stack&lt; D, P &gt;</a>
 </li>
 <li>firstNode()
 : <a class="el" href="class_graph_with_pointer.html#afd7f08ef73c53d9629089ddf70bf3a83">GraphWithPointer&lt; D &gt;</a>
 </li>
 <li>floyd()
-: <a class="el" href="class_graph_with_pointer.html#a525ca9513db45cfc310e3123104c2ae3">GraphWithPointer&lt; D &gt;</a>
+: <a class="el" href="class_graph_with_array.html#a67a351bd23959a41db7aad6ab4b3297b">GraphWithArray&lt; D &gt;</a>
+, <a class="el" href="class_graph_with_pointer.html#a525ca9513db45cfc310e3123104c2ae3">GraphWithPointer&lt; D &gt;</a>
 </li>
 </ul>
 
@@ -216,6 +229,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getData()
 : <a class="el" href="class_graph_with_pointer.html#ae8400a798378db62b2a610676930ea03">GraphWithPointer&lt; D &gt;</a>
 </li>
+<li>getPos()
+: <a class="el" href="class_graph_with_array.html#af2c38bc5dcefbfe94ccdaf399bdda562">GraphWithArray&lt; D &gt;</a>
+</li>
 <li>getSize()
 : <a class="el" href="class_list.html#af213bbcf13ee436a0f04cde66e337672">List&lt; D, P &gt;</a>
 , <a class="el" href="class_queue.html#ab2c7217e6737bf579493b321184a2db3">Queue&lt; D, P &gt;</a>
@@ -223,6 +239,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>graph
 : <a class="el" href="class_graph_with_pointer.html#aa0244d4abba9a569013bfeea80d8bdc8">GraphWithPointer&lt; D &gt;</a>
+</li>
+<li>GraphWithArray()
+: <a class="el" href="class_graph_with_array.html#a12995781859dfb146c974ed20be87283">GraphWithArray&lt; D &gt;</a>
 </li>
 <li>GraphWithPointer()
 : <a class="el" href="class_graph_with_pointer.html#a8934daf32ef649a0766f1c90d89746b2">GraphWithPointer&lt; D &gt;</a>
@@ -234,10 +253,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>index()
 : <a class="el" href="class_graph_with_pointer.html#ade6891f46541a78c4ed580d8fcfb0414">GraphWithPointer&lt; D &gt;</a>
 </li>
+<li>inOrder()
+: <a class="el" href="class_binary_search_tree.html#a902f97ed6c9615116a6abf69e2eda88d">BinarySearchTree&lt; Data &gt;</a>
+</li>
 <li>insert()
 : <a class="el" href="class_list.html#a750822c0f61577bfb5297ea44aebe5a8">List&lt; D, P &gt;</a>
 , <a class="el" href="class_queue.html#a3f3767b13bbd1a688dd13eb0fd8880c0">Queue&lt; D, P &gt;</a>
 , <a class="el" href="class_stack.html#afed02ed90b717dc8e34daf02e2d3b586">Stack&lt; D, P &gt;</a>
+</li>
+<li>InsertBalanced()
+: <a class="el" href="class_binary_search_tree.html#a088c657957f96e271ca71be990caa319">BinarySearchTree&lt; Data &gt;</a>
 </li>
 </ul>
 
@@ -245,10 +270,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>last
 : <a class="el" href="class_queue.html#a8fa09b42d16c1fe9dea414b29ab9612f">Queue&lt; D, P &gt;</a>
-, <a class="el" href="class_stack.html#ad8eba32e315256e8af67f0383c8f9576">Stack&lt; D, P &gt;</a>
+</li>
+<li>Lesser()
+: <a class="el" href="class_graph_with_array.html#a3b4fce82f222c9845f54e53d8fd8484f">GraphWithArray&lt; D &gt;</a>
 </li>
 <li>List()
-: <a class="el" href="class_list.html#a3deb54ab4f51c6c39aa4015f258b5812">List&lt; D, P &gt;</a>
+: <a class="el" href="class_list.html#af8bcd7dae1bc30af2158075482c3d8d9">List&lt; D, P &gt;</a>
+</li>
+<li>listNodes()
+: <a class="el" href="class_binary_search_tree.html#a2b42976e04f5bee4692910f258d3fb47">BinarySearchTree&lt; Data &gt;</a>
 </li>
 </ul>
 
@@ -267,7 +297,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
 <li>n
 : <a class="el" href="class_queue.html#a2b095618e827a9e728cb843bf4c0919e">Queue&lt; D, P &gt;</a>
-, <a class="el" href="class_stack.html#a640915a5eb039f4b13945b7fde167e17">Stack&lt; D, P &gt;</a>
 </li>
 <li>next
 : <a class="el" href="class_cell.html#a7e0e6c090f8aca70862c2dbc3257e3b9">Cell&lt; D &gt;</a>
@@ -282,7 +311,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_graph_with_pointer.html#ad319cf428f15b976a20106ecb7404af8">GraphWithPointer&lt; D &gt;</a>
 </li>
 <li>Node()
-: <a class="el" href="class_node.html#a6d883b970cbbadb1f7d4785f737fc650">Node&lt; D &gt;</a>
+: <a class="el" href="class_node.html#acae50cc855125df6d333368d28575b3e">Node&lt; D &gt;</a>
 </li>
 <li>numconexions
 : <a class="el" href="class_node.html#aa2f396eaa859fbd40a1b44950c0c539d">Node&lt; D &gt;</a>
@@ -304,12 +333,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
-<li>pop()
-: <a class="el" href="class_queue.html#aabf479754d981d43cebf7e8e68225881">Queue&lt; D, P &gt;</a>
-, <a class="el" href="class_stack.html#a9b465ba5e1c0be277775755dd680e52d">Stack&lt; D, P &gt;</a>
+<li>pos_menor()
+: <a class="el" href="class_graph_with_array.html#af87ecf36f6c39b66de554f61f75c576f">GraphWithArray&lt; D &gt;</a>
+</li>
+<li>postOrder()
+: <a class="el" href="class_binary_search_tree.html#a556e2a5d6a7818aa6ef66703c4c4419a">BinarySearchTree&lt; Data &gt;</a>
 </li>
 <li>predecessor
 : <a class="el" href="class_edge.html#afb8185528f4936a73ec3aa75df3a2da8">Edge&lt; D &gt;</a>
+</li>
+<li>preOrder()
+: <a class="el" href="class_binary_search_tree.html#ab803878e813cba6c7c84d00b802ad816">BinarySearchTree&lt; Data &gt;</a>
 </li>
 <li>prev()
 : <a class="el" href="class_list.html#acc1831ae92a288345ef20cb29f3846b2">List&lt; D, P &gt;</a>
@@ -320,6 +354,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_list.html#a8b34931e187e7e6b86aad86510ce4f3b">List&lt; D, P &gt;</a>
 , <a class="el" href="class_queue.html#aa461f8fb363f960a6e0eb34b18503eaa">Queue&lt; D, P &gt;</a>
 , <a class="el" href="class_stack.html#a89b9967c15c83fe7c257a42e49725881">Stack&lt; D, P &gt;</a>
+</li>
+<li>printMatrix()
+: <a class="el" href="class_graph_with_array.html#a1e793d1818b8ce1b5609c09937d637c0">GraphWithArray&lt; D &gt;</a>
+</li>
+<li>printNodes()
+: <a class="el" href="class_graph_with_array.html#aab8c2a2764f92a67046e6c30d3c7e13f">GraphWithArray&lt; D &gt;</a>
 </li>
 </ul>
 
@@ -337,12 +377,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="class_queue.html#a554993da9edb157443b0d956f11c8354">Queue&lt; D, P &gt;</a>
 , <a class="el" href="class_stack.html#a55637a6d0aed4283776ce2d159c3a58b">Stack&lt; D, P &gt;</a>
 </li>
+<li>removeEdge()
+: <a class="el" href="class_graph_with_array.html#a8dbb178a7444062224e9209eaf4568e6">GraphWithArray&lt; D &gt;</a>
+</li>
+<li>removeNode()
+: <a class="el" href="class_graph_with_array.html#a93d47381b8f1e7cad892e56cac8f0b0a">GraphWithArray&lt; D &gt;</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>searchEdge()
 : <a class="el" href="class_node.html#a0e0c1e71f6335ea4bf7c6dbbfdcca57e">Node&lt; D &gt;</a>
+</li>
+<li>Size()
+: <a class="el" href="class_graph_with_array.html#a91081993f67167c8952f3324941851f4">GraphWithArray&lt; D &gt;</a>
 </li>
 <li>sort()
 : <a class="el" href="class_list.html#ae3795939f27cf3e688cd470450e0c27a">List&lt; D, P &gt;</a>
@@ -358,6 +407,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 
 
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>tamTray()
+: <a class="el" href="class_graph_with_array.html#a06953833239da2624dbd5cac9d364b67">GraphWithArray&lt; D &gt;</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
 <li>weight
 : <a class="el" href="class_edge.html#a4147d8e7a5b7f44db4ffb6aed49ef569">Edge&lt; D &gt;</a>
@@ -366,9 +422,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_~"></a>- ~ -</h3><ul>
-<li>~Cell()
-: <a class="el" href="class_cell.html#a8a6091a249d6ff583049c35c85f4d778">Cell&lt; D &gt;</a>
-</li>
 <li>~Edge()
 : <a class="el" href="class_edge.html#aa30e6627706a71f8b2d4f838fe15303c">Edge&lt; D &gt;</a>
 </li>
@@ -391,7 +444,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 2 2017 19:29:07 for Laboratorio 3: Estructuras de datos no lineales by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 2 2017 23:56:52 for Laboratorio 3: Estructuras de datos no lineales by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

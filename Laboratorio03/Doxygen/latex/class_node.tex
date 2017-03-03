@@ -4,10 +4,21 @@
 
 {\ttfamily \#include $<$Node.\-h$>$}
 
+
+
+Collaboration diagram for Node$<$ D $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_node__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bf Node} ()
+{\bf Node} ()\label{class_node_a6d883b970cbbadb1f7d4785f737fc650}
+
 \begin{DoxyCompactList}\small\item\em Constructor de la clase \doxyref{Node}{p.}{class_node}, inicializa todos los atributos en nullptr o false, según corresponda. \end{DoxyCompactList}\item 
 {\bf Node} (D $\ast$d)
 \item 
@@ -17,23 +28,48 @@ void {\bf del\-Edge} ({\bf Node}$<$ D $>$ $\ast$s, {\bf Node}$<$ D $>$ $\ast$d)
 \item 
 int $\ast$ {\bf search\-Edge} ({\bf Node}$<$ D $>$ $\ast$s, {\bf Node}$<$ D $>$ $\ast$d)
 \item 
-virtual {\bf $\sim$\-Node} ()
-\begin{DoxyCompactList}\small\item\em Destructor de la clase \doxyref{Node}{p.}{class_node}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual {\bf $\sim$\-Node} ()\label{class_node_a6b5a080cf05afe6a81e4dd56ba5f90e3}
+
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \doxyref{Node}{p.}{class_node}. \end{DoxyCompactList}\item 
+{\bfseries Node} ({\bf Node} $\ast$l, {\bf Node} $\ast$r, D $\ast$d, {\bf Node} $\ast$f)\label{class_node_aa78739f6f3d6164fe37f7d838959d7cf}
+
+\item 
+{\bfseries Node} (const {\bf Node} \&orig)\label{class_node_abe46f0cf6f7350c2fb5207ae9da18359}
+
+\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-D $\ast$ {\bf data}
+D $\ast$ {\bf data}\label{class_node_a94c115991edeecf6664eaa4884fbf6ca}
+
 \begin{DoxyCompactList}\small\item\em Atributo que tiene el dato almacenado en el nodo. \end{DoxyCompactList}\item 
-{\bf Edge}$<$ D $>$ $\ast$ {\bf conexions}
+{\bf Edge}$<$ D $>$ $\ast$ {\bf conexions}\label{class_node_abd882079b39e0674e0e9e50d2591d136}
+
 \begin{DoxyCompactList}\small\item\em Arreglo que contiene todas las aristas que salen del nodo. \end{DoxyCompactList}\item 
-int {\bf numconexions}
+int {\bf numconexions}\label{class_node_aa2f396eaa859fbd40a1b44950c0c539d}
+
 \begin{DoxyCompactList}\small\item\em Numero de aristas que tiene el nodo. \end{DoxyCompactList}\item 
-int {\bf max\-Elements}
+int {\bf max\-Elements}\label{class_node_a565fd8acc8938a43443f05c7c9e8d896}
+
 \begin{DoxyCompactList}\small\item\em Máxima cantidad de elementos que puede contener el arreglo conexions. \end{DoxyCompactList}\item 
-bool {\bf been\-Here}
+bool {\bf been\-Here}\label{class_node_aac6afde6edec4fcb7be68c96666c1fe2}
+
 \begin{DoxyCompactList}\small\item\em Atributo de tipo bool que dice si se ha visitado el nodo. \end{DoxyCompactList}\item 
-bool {\bf been\-Temp}
-\begin{DoxyCompactList}\small\item\em Atributo de tipo bool, que indica si el nodo se ha utilizado para saber la distancia más corta entre un nodo y otro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool {\bf been\-Temp}\label{class_node_ad842fd061f930e3450a62c12ab93db24}
+
+\begin{DoxyCompactList}\small\item\em Atributo de tipo bool, que indica si el nodo se ha utilizado para saber la distancia más corta entre un nodo y otro. \end{DoxyCompactList}\item 
+{\bf Node} $\ast$ {\bfseries l}\label{class_node_a0887ae573dd58274be628313b5170186}
+
+\item 
+{\bf Node} $\ast$ {\bfseries r}\label{class_node_a61cefac7cf9a73b5057968706f6931fe}
+
+\item 
+{\bf Node} $\ast$ {\bfseries f}\label{class_node_a33f853af2475252e43c437811478fae1}
+
+\item 
+D $\ast$ {\bfseries d}\label{class_node_ab9a8975b57edc70d79492408a950c666}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -46,17 +82,6 @@ Plantilla de la clase \doxyref{Node}{p.}{class_node}
 \index{Node@{Node}!Node@{Node}}
 \subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$ D $>$\-::{\bf Node} (
 \begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_node_a6d883b970cbbadb1f7d4785f737fc650}
-
-
-Constructor de la clase \doxyref{Node}{p.}{class_node}, inicializa todos los atributos en nullptr o false, según corresponda. 
-
-\index{Node@{Node}!Node@{Node}}
-\index{Node@{Node}!Node@{Node}}
-\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Node}$<$ D $>$\-::{\bf Node} (
-\begin{DoxyParamCaption}
 \item[{D $\ast$}]{d}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{class_node_acae50cc855125df6d333368d28575b3e}
@@ -65,17 +90,6 @@ Constructor de la clase \doxyref{Node}{p.}{class_node}, inicializa data en d.
 {\em d} & dato de tipo puntero. \\
 \hline
 \end{DoxyParams}
-\index{Node@{Node}!$\sim$\-Node@{$\sim$\-Node}}
-\index{$\sim$\-Node@{$\sim$\-Node}!Node@{Node}}
-\subsubsection[{$\sim$\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ virtual {\bf Node}$<$ D $>$\-::$\sim${\bf Node} (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_node_a6b5a080cf05afe6a81e4dd56ba5f90e3}
-
-
-Destructor de la clase \doxyref{Node}{p.}{class_node}. 
-
 
 
 \subsection{Member Function Documentation}
@@ -126,51 +140,7 @@ la posición dentro de conexions, donde se encuentra la arista solicitada
 \end{DoxyReturn}
 
 
-\subsection{Member Data Documentation}
-\index{Node@{Node}!been\-Here@{been\-Here}}
-\index{been\-Here@{been\-Here}!Node@{Node}}
-\subsubsection[{been\-Here}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ bool {\bf Node}$<$ D $>$\-::been\-Here}\label{class_node_aac6afde6edec4fcb7be68c96666c1fe2}
-
-
-Atributo de tipo bool que dice si se ha visitado el nodo. 
-
-\index{Node@{Node}!been\-Temp@{been\-Temp}}
-\index{been\-Temp@{been\-Temp}!Node@{Node}}
-\subsubsection[{been\-Temp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ bool {\bf Node}$<$ D $>$\-::been\-Temp}\label{class_node_ad842fd061f930e3450a62c12ab93db24}
-
-
-Atributo de tipo bool, que indica si el nodo se ha utilizado para saber la distancia más corta entre un nodo y otro. 
-
-\index{Node@{Node}!conexions@{conexions}}
-\index{conexions@{conexions}!Node@{Node}}
-\subsubsection[{conexions}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ {\bf Edge}$<$D$>$$\ast$ {\bf Node}$<$ D $>$\-::conexions}\label{class_node_abd882079b39e0674e0e9e50d2591d136}
-
-
-Arreglo que contiene todas las aristas que salen del nodo. 
-
-\index{Node@{Node}!data@{data}}
-\index{data@{data}!Node@{Node}}
-\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ D$\ast$ {\bf Node}$<$ D $>$\-::data}\label{class_node_a94c115991edeecf6664eaa4884fbf6ca}
-
-
-Atributo que tiene el dato almacenado en el nodo. 
-
-\index{Node@{Node}!max\-Elements@{max\-Elements}}
-\index{max\-Elements@{max\-Elements}!Node@{Node}}
-\subsubsection[{max\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ int {\bf Node}$<$ D $>$\-::max\-Elements}\label{class_node_a565fd8acc8938a43443f05c7c9e8d896}
-
-
-Máxima cantidad de elementos que puede contener el arreglo conexions. 
-
-\index{Node@{Node}!numconexions@{numconexions}}
-\index{numconexions@{numconexions}!Node@{Node}}
-\subsubsection[{numconexions}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D$>$ int {\bf Node}$<$ D $>$\-::numconexions}\label{class_node_aa2f396eaa859fbd40a1b44950c0c539d}
-
-
-Numero de aristas que tiene el nodo. 
-
-
-
-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-{\bf Node.\-h}\end{DoxyCompactItemize}
+Node.\-h\item 
+Node\-T.\-h\end{DoxyCompactItemize}
