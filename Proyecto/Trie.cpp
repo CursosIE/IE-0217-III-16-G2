@@ -1,6 +1,7 @@
 #include "Trie.h"
 
-
+ int numNodes=0;
+ int numWords=0;
 Trie::Trie() {
     trieTree=new TrieNode();
 }
@@ -8,7 +9,6 @@ Trie::Trie() {
 
 void Trie::create(string textFile)
 {
-    
     const int maxchars = 27;
     const char* const DELIMITER= " ";
     ifstream file;
@@ -29,11 +29,13 @@ void Trie::create(string textFile)
             word=strtok(buf,DELIMITER);
             if(word!=NULL)
             {
-                cout<<word<<endl;
+                numWords++;
+                //cout<<word<<endl;
                 insert(this->trieTree,word);
             }
         }
     }
+    cout<<"Read "<< numWords << " into " << numNodes<<" nodes"<<endl; 
 }    
 
 void Trie::insert(TrieNode* trieTree, char* word)
@@ -43,8 +45,24 @@ void Trie::insert(TrieNode* trieTree, char* word)
     {
         if(currentNode->children[*word-CASE]== nullptr)
         {
+            numNodes++;
             currentNode->children[*word-CASE] = new TrieNode();
             currentNode->children[*word-CASE]->parent = currentNode;
+            if(currentNode->children[*word-CASE]->parent)
+            {
+                if(currentNode->children[*word-CASE]->parent->numChar==0)
+                {
+                    currentNode->children[*word-CASE]->str += *word;
+                    currentNode->children[*word-CASE]->numChar = 1;
+                }
+                else
+                {
+                    currentNode->children[*word-CASE]->str = currentNode->children[*word-CASE]->parent->str;
+                    currentNode->children[*word-CASE]->str += *word;
+                    currentNode->children[*word-CASE]->numChar = currentNode->children[*word-CASE]->parent->numChar + 1;
+                    
+                }
+            }
         }
         
         currentNode = currentNode->children[*word-CASE];
@@ -54,6 +72,7 @@ void Trie::insert(TrieNode* trieTree, char* word)
     amount++;
 }
 
+
 TrieNode* Trie::search(TrieNode* trieTree, char* word)
 {
     while(*word != '\0')
@@ -61,6 +80,10 @@ TrieNode* Trie::search(TrieNode* trieTree, char* word)
         if(trieTree->children[*word-CASE] != nullptr)
         {
             trieTree = trieTree->children[*word-CASE];
+           /* if(trieTree->parent)
+            {
+                cout<<trieTree->str<<endl;
+            }*/
             ++word;
         }
         

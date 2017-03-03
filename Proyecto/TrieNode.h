@@ -10,6 +10,8 @@ public:
     TrieNode* parent;
     bool EOW;
     TrieNode* children[ALPHABET_SIZE] = {};
+    string str;
+    int numChar;
     TrieNode();
     virtual ~TrieNode();
 private:

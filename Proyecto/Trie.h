@@ -18,6 +18,7 @@ public:
     void create(string textFile);
     void insert(TrieNode* trieTree, char* word);
     TrieNode* search(TrieNode* trieTree, char* word);
+    void getWord(TrieNode* last);
     TrieNode* trieTree;
     int amount;
 
