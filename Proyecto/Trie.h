@@ -1,3 +1,11 @@
+/**
+*@file Trie.h
+*@version 1.0
+*@date 6/03/17
+*@author Ericka Zúñiga Calvo, Leonardo Hernández
+*@title Distancia entre texto   
+*@brief Clase Trie
+*/
 #ifndef TRIE_H
 #define TRIE_H
 

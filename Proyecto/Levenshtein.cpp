@@ -1,11 +1,21 @@
+/**
+*@file Levenshtein.cpp
+*@version 1.0
+*@date 6/03/17
+*@author Ericka Zúñiga Calvo, Leonardo Hernández
+*@title Distancia entre texto   
+*@brief Clase Levenshtein
+*/
 #include "Levenshtein.h"
 
 
 Levenshtein::Levenshtein(int maxCost, string file, string word) {
     this->maxCost = maxCost;
     this->a1 = new Trie;
+    this->dictionary = new ListWithPointer<string,Cell<string>*>();
     this->word = word;
     a1->create(file);
+    dictionary->create(file);
 }
 
 
@@ -13,8 +23,7 @@ ListWithPointer<string,Cell<string>*>* Levenshtein::LevenshteinRow()
 {
     ListWithPointer<string,Cell<string>*>* results = new ListWithPointer<string,Cell<string>*>();
     ListWithPointer<int,Cell<int>*>* currentRow = new ListWithPointer<int,Cell<int>*>();
-    
-    for(int i=0; i<word.size()+1;i++)
+    for(int i=0; i<int(word.size())+1;i++)
     {
         currentRow->insert(i);
     }
@@ -31,7 +40,7 @@ ListWithPointer<string,Cell<string>*>* Levenshtein::LevenshteinRow()
 
 void Levenshtein::searchRecursive(TrieNode* node, char letter, ListWithPointer<int,Cell<int>*>* prevRow, ListWithPointer<string,Cell<string>*>* results)
 {
-    int columns = word.size()+1;
+    int columns = int(word.size())+1;
     ListWithPointer<int,Cell<int>*>* currentRow = new ListWithPointer<int,Cell<int>*>();
     currentRow->insert(prevRow->get(prevRow->first)+1);
     for(int d=1; d<columns;d++)
@@ -94,7 +103,7 @@ int Levenshtein::min(int a, int b, int c) // 10
 
 int Levenshtein::Levenshtein_alg(string s1){
 	int l_s1= s1.size() +1; //5N+8:  metodo Size (5n+5), declaracion, asignacion, operacion 
-	int l_s2=word.size() +1;  //5M+8:  metodo Size (5n+5), declaracion, asignacion, operacion
+	int l_s2=int(word.size()) +1;  //5M+8:  metodo Size (5n+5), declaracion, asignacion, operacion
         int matrix[l_s1][l_s2]; //+1 Declaracion
 	int distancia=0; //+1 Declaracion y asignacion
 	int costo;  //+1 Declaracion
@@ -133,20 +142,18 @@ int Levenshtein::Levenshtein_alg(string s1){
 bool Levenshtein::inRange(TrieNode* a){
 	bool ret=true; //+2 Asignacion y declaracion
 	int q= a->numChar; //+2 Asignacion y declaracion
-	int dif= q - word.size(); //+3 Asignacion, declaracion y operacion
+	int dif= q - int(word.size()); //+3 Asignacion, declaracion y operacion
 	if(dif<0){ // +1 comparacion
 		dif= -1*dif; //+2 Asignacion y declaracion
 	}
 	
-	if(dif>maxCost&& q>word.size()){  //+3 Comparaciones
+	if(dif>maxCost&& q>int(word.size())){  //+3 Comparaciones
 		ret=false; //+1 Asignacion
 	}
 	return ret; //+1 retorno
 }
 
-ListWithPointer<string,Cell<string>*>* Levenshtein::LevenshteinMatrix(TrieNode* a){
-    
-    ListWithPointer<string,Cell<string>*>* results = new ListWithPointer<string,Cell<string>*>();
+ListWithPointer<string,Cell<string>*>* Levenshtein::LevenshteinMatrix(TrieNode* a,ListWithPointer<string,Cell<string>*>* results){
 	if(a!=nullptr && inRange(a)==true ){ //+1 Comparacion
 		if(a->EOW==true){ //+18, 3 Comparaciones y metodo in range
 			if( Levenshtein_alg(a->str) <= maxCost){	//T(n)=16NxM + 10N + 10M + 30, 2 Comparaciones + Levenshtein_alg 		
@@ -157,12 +164,27 @@ ListWithPointer<string,Cell<string>*>* Levenshtein::LevenshteinMatrix(TrieNode* 
 		for(int i=0;i<ALPHABET_SIZE;i++){
 			TrieNode* b= a->children[i];
 			if(b!=nullptr){
-				LevenshteinMatrix(b);
+				LevenshteinMatrix(b,results);
 			}
 		}
-	}	
-    return results;
+	}
+        return results;
 }
+
+ ListWithPointer<string,Cell<string>*>* Levenshtein::LevenshteinList()
+ {
+     ListWithPointer<string,Cell<string>*>* results = new ListWithPointer<string,Cell<string>*>();
+     for(int i=0;i<dictionary->getSize();i++)
+     {
+         int distance = Levenshtein_alg(dictionary->pos(i));
+         if(distance<= maxCost)
+         {
+             results->insert(dictionary->pos(i));
+         }
+     }
+     return results;
+     
+ }
 
 
 Levenshtein::~Levenshtein() {

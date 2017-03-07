@@ -1,3 +1,11 @@
+/**
+*@file ListWithPointer.h
+*@version 1.0
+*@date 6/03/17
+*@author Ericka Zúñiga Calvo, Leonardo Hernández
+*@title Distancia entre texto   
+*@brief Clase ListWithPointer
+*/
 #ifndef LISTWITHPOINTER_H
 #define LISTWITHPOINTER_H
 
@@ -19,6 +27,35 @@ class ListWithPointer : public List<D, P> {
             this->first = this->last = nullptr;
             this->n=0;
         }
+        
+        /*! Guarda todas las palabras de un archivo en el arreglo.
+         \param textFile archivo del que se leen las palabras.*/
+        void create(string textFile)
+        {
+            const int maxchars = 27; //2
+            const char* const DELIMITER= " "; //2
+            ifstream file; //1
+            file.open(textFile.c_str()); //1
+            if(!file.good())//1
+            {
+                cout<<"No es posible abrir el archivo..."<<endl;//1
+            }
+            else//1
+            {
+                //cout<<"Creando arbol"<<endl;
+                while(!file.eof()) //N*(7+25M)
+                {
+                    char* word; //1
+                    char buf[maxchars]; //1
+                    file.getline(buf,maxchars);//1
+                    word=strtok(buf,DELIMITER);//1
+                    if(word!=NULL)//1
+                    {
+                        insert(word);
+                    }
+                }
+            }
+        } 
         
         /*! \brief Destructor, elimina todos los elementos de la lista con emptyList() 
          */
@@ -110,6 +147,9 @@ class ListWithPointer : public List<D, P> {
             return nullptr;
         }
         
+        /*! Metodo pos, da el valor que se encuentra guardado en la posición k del arreglo.
+         \param k posicion
+         \return el valor en k. */
         D pos(int k)
         {
             int counter=0;
@@ -117,11 +157,13 @@ class ListWithPointer : public List<D, P> {
             for(int i=0;i<getSize();i++)
             {
                 if(counter==k){
-                    return get(temp);
+                   i=getSize()+2; 
                 }
+                else{
                 temp = next(temp);
-                counter++;
+                counter++;}
             }
+            return get(temp);
         }
         //!Metodo get
         /*! Metodo de obtencion del dato contenido en una celda
@@ -175,9 +217,10 @@ class ListWithPointer : public List<D, P> {
             if(first){
                 for(int i=0; i<this->getSize(); i++)
                 {
-                    cout<<get(temp)<<endl;
+                    cout<<get(temp)<<" ";
                     temp=next(temp);
                 }
+                cout<<endl;
                 cout<<"------------------------------------------------------------"<<endl;
                 cout<<"------------------------------------------------------------"<<endl;
             }

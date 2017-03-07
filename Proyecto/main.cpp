@@ -1,3 +1,12 @@
+/**
+*@file main.cpp
+*@version 1.0
+*@date 6/03/17
+*@author Ericka Zúñiga Calvo, Leonardo Hernández
+*@title Distancia entre texto   
+*@brief Clase main
+*/
+
 #include "TrieNode.h"
 #include "Trie.h"
 #include "Levenshtein.h"
@@ -13,7 +22,7 @@ int main(int argc, char** argv) {
     stringstream strInt;
     strInt<<argv[3];
     strInt>>n;
-
+    
     clock_t t_init, t_fin;
     double secs;
     
@@ -25,19 +34,26 @@ int main(int argc, char** argv) {
     t_fin=clock();
     
     secs=(double)(t_fin-t_init)/CLOCKS_PER_SEC;
-    cout<<"El tiempo de ejecucion del metodo por fila fue: "<<secs<<endl;
+    cout<<"El tiempo de ejecucion del metodo por Trie fila fue: "<<secs<<endl;
     resultsRow->printList();
     
-    ListWithPointer<string,Cell<string>*>* resultsMatrix;
-    
+    ListWithPointer<string,Cell<string>*>* resultsMatrix = new ListWithPointer<string,Cell<string>*>();
     t_init=clock();
-    resultsMatrix = a->LevenshteinMatrix(a->a1->trieTree);
+    a->LevenshteinMatrix(a->a1->trieTree,resultsMatrix);
     t_fin=clock();
     
     secs=(double)(t_fin-t_init)/CLOCKS_PER_SEC;
-    cout<<"El tiempo de ejecucion del metodo por Matriz fue: "<<secs<<endl;
-    resultsRow->printList();
+    cout<<"El tiempo de ejecucion del metodo por Trie Matrix fue: "<<secs<<endl;
+    resultsMatrix->printList();
     
+     ListWithPointer<string,Cell<string>*>* resultsList;
+     t_init=clock();
+     resultsList=a->LevenshteinList();
+     t_fin=clock();
+     secs=(double)(t_fin-t_init)/CLOCKS_PER_SEC;
+     cout<<"El tiempo de ejecucion del metodo por Lista fue: "<<secs<<endl;
+     resultsList->printList();
+   
     delete a;
     return 0;
 }

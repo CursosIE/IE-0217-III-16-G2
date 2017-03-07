@@ -1,3 +1,11 @@
+/**
+*@file Cell.cpp
+*@version 1.0
+*@date 6/03/17
+*@author Ericka Zúñiga Calvo
+ *@author Leonardo Hernández   
+*@brief Clase Cell
+*/
 #ifndef CELL_H
 #define CELL_H
 

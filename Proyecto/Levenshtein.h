@@ -1,4 +1,11 @@
-
+/**
+*@file Levenshtein.h
+*@version 1.0
+*@date 6/03/17
+*@author Ericka Zúñiga Calvo, Leonardo Hernández
+*@title Distancia entre texto   
+*@brief Clase Levenshtein
+*/
 #ifndef LEVENSHTEIN_H
 #define LEVENSHTEIN_H
 
@@ -18,6 +25,8 @@ public:
     int maxCost;
     /*! Palabra a la cual se le quiere encontrar coincidencias con una distancia menor a maxCost dentro del archivo*/
     string word;
+    /*! Arreglo de punteros en el cual se encuentran guardadas las palabras del archivo.*/
+    ListWithPointer<string,Cell<string>*>* dictionary;
     
     /*! Constructor de la clase Levenshtein.
      \param maxCost mayor distancia permitida entre palabras
@@ -66,8 +75,13 @@ public:
     *(utilizando el metodo  Levenshtein_alg() ) se agregan a la lista listaCoincid.
      \param a nodo en el que se encuentra.
      \return arreglo que contiene las coincidencias dentro del archivo.*/
-    ListWithPointer<string,Cell<string>*>* LevenshteinMatrix(TrieNode* a);
+    ListWithPointer<string,Cell<string>*>* LevenshteinMatrix(TrieNode* a,ListWithPointer<string,Cell<string>*>* results);
     
+    /*! Este metodo recorre todas las palabras guardadas en dictionary, les aplica el método Levenshtein_alg y
+     si cumple con la condición de que la distancia sea menor o igual a maxCost, la guarda dentro del arreglo results.
+     \return todas las coincidencias dentro del archivo*/
+    ListWithPointer<string,Cell<string>*>* LevenshteinList();
+  
     virtual ~Levenshtein();
 
 };

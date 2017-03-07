@@ -1,3 +1,11 @@
+/**
+*@file TrieNode.h
+*@version 1.0
+*@date 6/03/17
+*@author Ericka Zúñiga Calvo, Leonardo Hernández
+*@title Distancia entre texto   
+*@brief Clase TrieNode
+*/
 #ifndef TRIENODE_H
 #define TRIENODE_H
 #include <iostream>

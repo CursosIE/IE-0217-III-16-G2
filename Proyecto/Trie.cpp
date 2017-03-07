@@ -1,3 +1,11 @@
+/**
+*@file Trie.cpp
+*@version 1.0
+*@date 6/03/17
+*@author Ericka Zúñiga Calvo, Leonardo Hernández
+*@title Distancia entre texto   
+*@brief Clase Trie
+*/
 #include "Trie.h"
 
  int numNodes=0;
@@ -25,7 +33,6 @@ void Trie::create(string textFile)
             char* word; //1
             char buf[maxchars]; //1
             file.getline(buf,maxchars);//1
-            int n=0;//1
             word=strtok(buf,DELIMITER);//1
             if(word!=NULL)//1
             {
