@@ -1,0 +1,13 @@
+Proyecto - Grupo 2.
+  Instrucciones para ejecutar el programa:
+  Es importante recalcar que el ejecutable recibe tres argumentos en el orden respectivo:
+  a) palabra a buscar  b) Archivo de texto donde se encuentran las palabras c) tolerancia.
+
+  Para cambiar alguno de estos tres argumentos, es preciso que los cambie dentro del Makefile, es decir los TARGETS:
+  a)WORD b)FILE c)TOLERANCE
+
+  1- Para compilar: make build.
+  2- Para correr el programa: make run.
+  3- Para limpiar los archivos ejecutables: make clean.
+
+  4-Si desea realizar todos los anteriores con un solo comando: make.
