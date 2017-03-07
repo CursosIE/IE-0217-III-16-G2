@@ -9,16 +9,18 @@ var indexSectionsWithContent =
 {
   0: "acdefgilmnprstw~",
   1: "clt",
-  2: "acefgilmnprst~",
-  3: "acdeflmnpstw"
+  2: "lmt",
+  3: "acefgilmnprst~",
+  4: "acdeflmnpstw"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions",
-  3: "variables"
+  2: "files",
+  3: "functions",
+  4: "variables"
 };
 
 function convertToId(search)
