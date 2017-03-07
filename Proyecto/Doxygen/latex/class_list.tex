@@ -1,0 +1,271 @@
+\section{List$<$ D, P $>$ Class Template Reference}
+\label{class_list}\index{List$<$ D, P $>$@{List$<$ D, P $>$}}
+
+
+{\ttfamily \#include $<$List.\-h$>$}
+
+
+
+Inheritance diagram for List$<$ D, P $>$\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{class_list__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf List} ()
+\item 
+{\bf List} (int t)
+\item 
+{\bf List} (const {\bf List} \&orig)
+\item 
+virtual {\bf $\sim$\-List} ()
+\item 
+virtual void {\bf insert} (D d)=0
+\item 
+virtual void {\bf remove} (D d)=0
+\item 
+virtual P {\bf find} (D d)=0
+\item 
+virtual D {\bf get} (P k)=0
+\item 
+virtual void {\bf assign} (P k, D d)=0
+\item 
+virtual void {\bf sort} ()=0
+\item 
+virtual int {\bf get\-Size} ()=0
+\item 
+virtual void {\bf print\-List} ()=0
+\item 
+virtual P {\bf next} (P k)=0
+\item 
+virtual P {\bf prev} (P k)=0
+\item 
+virtual void {\bf empty\-List} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename D, typename P$>$class List$<$ D, P $>$}
+
+Plantilla de la clase \doxyref{List}{p.}{class_list} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List}$<$ D, P $>$\-::{\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_list_a3deb54ab4f51c6c39aa4015f258b5812}
+Constructor de la clase Lista sin atributos \index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List}$<$ D, P $>$\-::{\bf List} (
+\begin{DoxyParamCaption}
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_list_ad4d8108cecffb02dbc5e5e48691a0d43}
+Constructor de la clase Lista. 
+\begin{DoxyParams}{Parameters}
+{\em t} & tamaño de la lista \\
+\hline
+\end{DoxyParams}
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ {\bf List}$<$ D, P $>$\-::{\bf List} (
+\begin{DoxyParamCaption}
+\item[{const {\bf List}$<$ D, P $>$ \&}]{orig}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_list_af8bcd7dae1bc30af2158075482c3d8d9}
+Constructor por copia \index{List@{List}!$\sim$\-List@{$\sim$\-List}}
+\index{$\sim$\-List@{$\sim$\-List}!List@{List}}
+\subsubsection[{$\sim$\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual {\bf List}$<$ D, P $>$\-::$\sim${\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_list_a624593fb77847bf7ad4cacfba3442471}
+Destructor de la clase lista 
+
+\subsection{Member Function Documentation}
+\index{List@{List}!assign@{assign}}
+\index{assign@{assign}!List@{List}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\-::assign (
+\begin{DoxyParamCaption}
+\item[{P}]{k, }
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_acb062aa988f4048498b30a2d845a311b}
+Metodo virtual assign, asigna a una determinada posicion k, el valor d 
+\begin{DoxyParams}{Parameters}
+{\em k} & dato tipo P, es una posicion o celda. \\
+\hline
+{\em d} & dado tipo D, que se quiere asignar a k \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_aeaa834b22c4d7276a77ff29df3da7a30}.
+
+\index{List@{List}!empty\-List@{empty\-List}}
+\index{empty\-List@{empty\-List}!List@{List}}
+\subsubsection[{empty\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\-::empty\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_a24b4f177a70215980e81ef7b2981fa1e}
+Metodo empty\-List, vacia la lista 
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_aec4f5374971962c79d397bbcd0080199}.
+
+\index{List@{List}!find@{find}}
+\index{find@{find}!List@{List}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual P {\bf List}$<$ D, P $>$\-::find (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_a2b40d6fffc7b2fb5138b648f52c839ee}
+Metodo virtual find, busca dentro de la lista el dato d. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato tipo D que se desea encontrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+posicion o celda donde se encuentra el dato 
+\end{DoxyReturn}
+
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_afeff8b963c197378553e2a3f73eaf66a}.
+
+\index{List@{List}!get@{get}}
+\index{get@{get}!List@{List}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual D {\bf List}$<$ D, P $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_a5bd565e668247ae0691983227367cc88}
+Metodo virtual get, da el valor que se encuentra almacenado en la posicion k. 
+\begin{DoxyParams}{Parameters}
+{\em k} & dato tipo P, es una posicion o celda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna el valor almacenado en k 
+\end{DoxyReturn}
+
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_a0ff36c852334da8bc167356e636c1846}.
+
+\index{List@{List}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!List@{List}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual int {\bf List}$<$ D, P $>$\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_af213bbcf13ee436a0f04cde66e337672}
+Metodo virtual get\-Size, da el tamaño de la lista. \begin{DoxyReturn}{Returns}
+el tamaño de la lista 
+\end{DoxyReturn}
+
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_ac70c49b5703887fd867e90cdac3c706f}.
+
+\index{List@{List}!insert@{insert}}
+\index{insert@{insert}!List@{List}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_a01f588d87d47f8332928eca38f7b11bb}
+Metodo virtual insert, agrega el dato d a la lista. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato tipo D que se desea agregar a la lista \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_a676e57683ade8e179e8eff5885f7309a}.
+
+\index{List@{List}!next@{next}}
+\index{next@{next}!List@{List}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual P {\bf List}$<$ D, P $>$\-::next (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_a4ec3e88e176bb45bc49b030d1c8abb3f}
+Metodo next, da la posicion o celda que le sigue a k 
+\begin{DoxyParams}{Parameters}
+{\em k} & dato tipo P, es una posicion o celda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la posicion siguiente a k 
+\end{DoxyReturn}
+
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_a518b5ee89e3ad32ae7cd4ddd5d4fa7e9}.
+
+\index{List@{List}!prev@{prev}}
+\index{prev@{prev}!List@{List}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual P {\bf List}$<$ D, P $>$\-::prev (
+\begin{DoxyParamCaption}
+\item[{P}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_acc1831ae92a288345ef20cb29f3846b2}
+Metodo next, retorna la posicion o celda que precede a k 
+\begin{DoxyParams}{Parameters}
+{\em k} & dato tipo P, es una posicion o celda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la posicion previa a k 
+\end{DoxyReturn}
+
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_a7242068fcc3a193f0f7e94517856e431}.
+
+\index{List@{List}!print\-List@{print\-List}}
+\index{print\-List@{print\-List}!List@{List}}
+\subsubsection[{print\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\-::print\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_a8b34931e187e7e6b86aad86510ce4f3b}
+Metodo print\-List, imprime la lista 
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_a7079b5f1dbddb87a7e33ffc71ebb7b92}.
+
+\index{List@{List}!remove@{remove}}
+\index{remove@{remove}!List@{List}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\-::remove (
+\begin{DoxyParamCaption}
+\item[{D}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_a14fc4e853102018df78db3899aa00d71}
+Metodo virtual remove , remueve el dato d de la lista, si este existe. 
+\begin{DoxyParams}{Parameters}
+{\em d} & dato tipo D que se desea remover de la lista \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_abcb151e95e9fffea7f9f7af593d8176f}.
+
+\index{List@{List}!sort@{sort}}
+\index{sort@{sort}!List@{List}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D , typename P $>$ virtual void {\bf List}$<$ D, P $>$\-::sort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_list_ae3795939f27cf3e688cd470450e0c27a}
+Metodo virtual sort, ordena la lista 
+
+Implemented in {\bf List\-With\-Pointer$<$ D, P $>$} \doxyref{}{p.}{class_list_with_pointer_aa46631b2da29895d1f767626fb591bc8}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+List.\-h\end{DoxyCompactItemize}

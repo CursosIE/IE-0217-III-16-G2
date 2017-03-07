@@ -1,0 +1,81 @@
+\section{Trie Class Reference}
+\label{class_trie}\index{Trie@{Trie}}
+
+
+Collaboration diagram for Trie\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_trie__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf create} (string text\-File)
+\item 
+void {\bf insert} (char $\ast$word)
+\item 
+{\bf Trie\-Node} $\ast$ {\bf search} (char $\ast$word)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Trie\-Node} $\ast$ {\bf trie\-Tree}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Trie@{Trie}!create@{create}}
+\index{create@{create}!Trie@{Trie}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void Trie\-::create (
+\begin{DoxyParamCaption}
+\item[{string}]{text\-File}
+\end{DoxyParamCaption}
+)}\label{class_trie_aba2fe23150879d718c56e51ab61006d4}
+Crea el trie a partir de un archivo. Va leyendo línea por línea el archivo, y va insertando la palabra al trie. 
+\begin{DoxyParams}{Parameters}
+{\em text\-File} & archivo. \\
+\hline
+\end{DoxyParams}
+\index{Trie@{Trie}!insert@{insert}}
+\index{insert@{insert}!Trie@{Trie}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void Trie\-::insert (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{word}
+\end{DoxyParamCaption}
+)}\label{class_trie_a5951beb416bb09f990126f5bc39aff58}
+Inserta palabras en el trie. De manera que tiene un nodo current\-Node que se iguala a la raíz (trie\-Tree) y busca si current\-Node tiene un nodo hijo en la posición de la primera letra de la palabra, si no la tiene, crea un trie\-Node, de lo contrario current\-Node pasa a ser el nodo hijo y se continua con la siguiente letra de la palabra. 
+\begin{DoxyParams}{Parameters}
+{\em word} & palabra a insertar. \\
+\hline
+\end{DoxyParams}
+\index{Trie@{Trie}!search@{search}}
+\index{search@{search}!Trie@{Trie}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trie\-Node} $\ast$ Trie\-::search (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{word}
+\end{DoxyParamCaption}
+)}\label{class_trie_ab9777dcdc2c9ccb8fe9080fa1a640109}
+Busca si existe dentro del árbol la palabra word. Tiene un nodo current\-Node que inicia en el root del trie y se inicia con la primera letra de la palabra. Se ve si current\-Node tiene un trie\-Node (hijo) en la posición de la letra a buscar de children. De si tenerlo, current\-Node pasa a ser el nodo hijo y se continua con la siguiente letra de la palabra. Si se alcanza la última letra de la palabra, se verifica si E\-O\-W en dicho nodo es true. Si esto ocurre la palabra existe, de lo contrario no existe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & palabra buscada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nodo donde se ubica la palabra. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Trie@{Trie}!trie\-Tree@{trie\-Tree}}
+\index{trie\-Tree@{trie\-Tree}!Trie@{Trie}}
+\subsubsection[{trie\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trie\-Node}$\ast$ Trie\-::trie\-Tree}\label{class_trie_a301aa208fe6fc7abaaf264c117070ed6}
+Raíz del árbol 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Trie.\-h\item 
+Trie.\-cpp\end{DoxyCompactItemize}
