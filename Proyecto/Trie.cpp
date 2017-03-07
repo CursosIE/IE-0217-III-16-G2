@@ -9,81 +9,76 @@ Trie::Trie() {
 
 void Trie::create(string textFile)
 {
-    const int maxchars = 27;
-    const char* const DELIMITER= " ";
-    ifstream file;
-    file.open(textFile.c_str());
-    if(!file.good())
+    const int maxchars = 27; //2
+    const char* const DELIMITER= " "; //2
+    ifstream file; //1
+    file.open(textFile.c_str()); //1
+    if(!file.good())//1
     {
-        cout<<"No es posible abrir el archivo..."<<endl;
+        cout<<"No es posible abrir el archivo..."<<endl;//1
     }
-    else
+    else//1
     {
         //cout<<"Creando arbol"<<endl;
-        while(!file.eof())
+        while(!file.eof()) //N*(7+25M)
         {
-            char* word;
-            char buf[maxchars];
-            file.getline(buf,maxchars);
-            int n=0;
-            word=strtok(buf,DELIMITER);
-            if(word!=NULL)
+            char* word; //1
+            char buf[maxchars]; //1
+            file.getline(buf,maxchars);//1
+            int n=0;//1
+            word=strtok(buf,DELIMITER);//1
+            if(word!=NULL)//1
             {
-                numWords++;
+                numWords++;//1
                 //cout<<word<<endl;
-                insert(this->trieTree,word);
+                insert(word);
             }
         }
     }
-    cout<<"Read "<< numWords << " into " << numNodes<<" nodes"<<endl; 
+    cout<<"Read "<< numWords << " into " << numNodes<<" nodes"<<endl; //1
 }    
 
-void Trie::insert(TrieNode* trieTree, char* word)
+void Trie::insert( char* word) //25M+4
 {
-    TrieNode* currentNode = trieTree;
-    while(*word != '\0')
+    TrieNode* currentNode = trieTree; //1
+    while(*word != '\0') //M
     {
-        if(currentNode->children[*word-CASE]== nullptr)
+        if(currentNode->children[*word-CASE]== nullptr)//2
         {
-            numNodes++;
-            currentNode->children[*word-CASE] = new TrieNode();
-            currentNode->children[*word-CASE]->parent = currentNode;
-            if(currentNode->children[*word-CASE]->parent)
+            numNodes++;//1
+            currentNode->children[*word-CASE] = new TrieNode();//2
+            currentNode->children[*word-CASE]->parent = currentNode;//2
+            if(currentNode->children[*word-CASE]->parent)//1
             {
-                if(currentNode->children[*word-CASE]->parent->numChar==0)
+                if(currentNode->children[*word-CASE]->parent->numChar==0)//2
                 {
-                    currentNode->children[*word-CASE]->str += *word;
-                    currentNode->children[*word-CASE]->numChar = 1;
+                    currentNode->children[*word-CASE]->str += *word;//2
+                    currentNode->children[*word-CASE]->numChar = 1;//2
                 }
                 else
                 {
-                    currentNode->children[*word-CASE]->str = currentNode->children[*word-CASE]->parent->str;
-                    currentNode->children[*word-CASE]->str += *word;
-                    currentNode->children[*word-CASE]->numChar = currentNode->children[*word-CASE]->parent->numChar + 1;
-                    
+                    currentNode->children[*word-CASE]->str = currentNode->children[*word-CASE]->parent->str;//3
+                    currentNode->children[*word-CASE]->str += *word;//3
+                    currentNode->children[*word-CASE]->numChar = currentNode->children[*word-CASE]->parent->numChar + 1;//3
                 }
             }
         }
         
-        currentNode = currentNode->children[*word-CASE];
-        ++word;
+        currentNode = currentNode->children[*word-CASE];//2
+        ++word;//1
     }
     currentNode->EOW = true;
-    amount++;
 }
 
 
-TrieNode* Trie::search(TrieNode* trieTree, char* word)
+TrieNode* Trie::search(char* word)
 {
+    TrieNode* currentNode = trieTree;
     while(*word != '\0')
     {
-        if(trieTree->children[*word-CASE] != nullptr)
+        if(currentNode->children[*word-CASE] != nullptr)
         {
-            trieTree = trieTree->children[*word-CASE];
-           /* if(trieTree->parent)
-            {
-                cout<<trieTree->str<<endl;
-            }*/
+            currentNode = currentNode->children[*word-CASE];
             ++word;
         }
         
