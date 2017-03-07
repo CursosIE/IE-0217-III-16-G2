@@ -14,4 +14,4 @@ El presente trabajo, consiste en 4 clases principales:
   3-ListWithPointer: Se utiliza para crear arreglos con punteros.
   4-Levenshtein: Es la que lleva la implementación de todas las demás clases y el algoritmo de Levenshtein.
   
-  El progrma recibe una palabra, un archivo y una tolerancia, y busca todas las palabras dentro del archivo que tengan una distancia entre texto menor o igual a la tolerancia.
+  El programa recibe una palabra, un archivo y una tolerancia, y busca todas las palabras dentro del archivo que tengan una distancia entre texto menor o igual a la tolerancia.
